@@ -1,0 +1,188 @@
+@import "layout.scss";
+@import "colors.scss";
+@import "fonts.scss";
+
+$navHeight: 55;
+$btnTopmarg: 8;
+$btnRightmarg: 26;
+
+/***************** HEADER  ***************/
+/***************** MOBIL/BURGER  ***************/
+.hideAnim {
+  opacity: 0;
+}
+
+header {
+  @extend .site-padding;
+  @include breakpoint(desktop) {
+    padding-top: $desktoppaddingtop;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+.mobile {
+  @include breakpoint(desktop) {
+    display: none;
+  }
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  background-color: $white;
+  // overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  @extend .site-padding;
+  margin-top: 0;
+  position: absolute;
+  top: 90px;
+  width: 100vw;
+  text-align: left;
+  // margin-top: $mobilmargintop;
+}
+
+.overlay a {
+  @extend.font-mobile-nav;
+  cursor: pointer;
+  padding: 0 0;
+  padding-bottom: 20px;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a.sublink {
+  @extend .font-mobile-subnav;
+  padding-bottom: 12px;
+  margin-left: 10px;
+}
+.overlay a.sublink:nth-child(5),
+.overlay a.sublink:nth-child(11) {
+  padding-bottom: 20px;
+}
+
+.overlay .closebtn {
+  font-family: sans-serif;
+  color: $oohblue;
+  position: absolute;
+  margin-top: $btnTopmarg + px;
+  right: $btnRightmarg + px;
+  font-size: $navHeight + px;
+}
+
+.openbtn {
+  // @extend .font-footer-main;
+  color: $oohblue;
+  position: absolute;
+  font-size: $navHeight + px;
+  right: 0;
+  margin-right: $mobilepaddingsides;
+  // margin-top: calc((74 - #{$navHeight}) / 2) + px;
+  margin-top: $btnTopmarg + px;
+  cursor: pointer;
+  top: 0;
+}
+
+.nav-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fb-icon {
+  background-image: url("../assets/facebook_peach.svg");
+  width: 16px;
+  height: 30px;
+  margin-right: 20px;
+}
+.insta-icon {
+  background-image: url("../assets/instagram_peach.svg");
+  width: 31px;
+  height: 31px;
+}
+
+#so-me-icons {
+  display: flex;
+}
+
+.logo_con {
+  margin-left: 0px;
+  background-image: url("../assets/logo_svg_uden_navn.svg");
+  width: 55px;
+  height: 54px;
+  opacity: 1;
+  transition: opacity 2.3s;
+  @include breakpoint(desktop) {
+    background-image: url("../assets/newlogo.svg");
+    margin: 0 0;
+    width: 65px;
+    height: 64px;
+  }
+}
+
+.lNav {
+  background-image: url("../assets/newlogo.svg");
+}
+
+//DESKTOP
+
+.desktop {
+  display: none;
+  @include breakpoint(desktop) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.desk_main {
+  @extend .font-desk-nav;
+  margin-left: 80px;
+  white-space: nowrap;
+}
+
+// .desk_main:hover{
+
+// }
+
+.dropdown-content a {
+  @extend .font-mobile-subnav;
+  float: none;
+  text-align: right;
+  margin-top: 22px;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown:hover .dropdown-content {
+  visibility: visible;
+  opacity: 1;
+  // display: grid;
+}
+
+.dropdown-content {
+  // display: none;
+  display: grid;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  position: absolute;
+  z-index: 1;
+}
+
+nav {
+  justify-self: end;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}

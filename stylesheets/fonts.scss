@@ -1,0 +1,313 @@
+@import "layout.scss";
+@import "colors.scss";
+
+$raleway: "Raleway", sans-serif;
+$ra1: 100;
+$ra3: 300;
+$ra5: 500;
+$ra7: 700;
+$roboto: "Roboto", sans-serif;
+$ro1: 100;
+$ro3: 300;
+$quicksand: "Quicksand", sans-serif;
+$q5: 500;
+$q7: 700;
+
+// $dynamic-font-reference-size: 1600;
+
+// @function dynamicFontSize($site-width, $reference-width, $font-size) {
+//   @if $useFluid == false {
+//     @return $font-size;
+//   }
+//   @return calc(
+//     #{$font-size}px +
+//       ((#{$site-width} - #{$reference-width}px) * 0.0005 * #{$font-size})
+//   );
+// }
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: $emerald;
+}
+
+a:active {
+  color: $darkpeach;
+}
+
+.super-font {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  //   position: relative;
+  color: $oohblue;
+  //   left: -0.05em;
+
+  margin: 0;
+}
+
+.font-p {
+  @extend .super-font;
+
+  font-family: $roboto;
+  font-weight: $ro3;
+  font-size: 14px;
+  color: $oohblue;
+  //   line-height: 15px;
+  //   letter-spacing: -0.48px;
+  // left: -0.03em;
+
+  @include breakpoint(desktop) {
+    font-size: 19px;
+    // line-height: 19px;
+    // letter-spacing: -0.64px;
+  }
+}
+
+.font-h1 {
+  @extend .super-font;
+
+  font-family: $raleway;
+  font-weight: $ra7;
+  font-size: 33px;
+  color: $headline;
+  //   line-height: 23px;
+  //   letter-spacing: 0;
+
+  @include breakpoint(desktop) {
+    font-size: 43px;
+    // line-height: 23px;
+    // letter-spacing: 1px;
+  }
+}
+
+.font-h2 {
+  @extend .super-font;
+
+  font-family: $raleway;
+  font-weight: $ra5;
+  font-size: 29px;
+  color: $headline;
+  //   line-height: 29px;
+  //   letter-spacing: -1.04px;
+  //   left: -0.03em;
+
+  @include breakpoint(desktop) {
+    font-size: 43px;
+    font-weight: $ra7;
+    // letter-spacing: -2px;
+    // left: -0.26em;
+  }
+}
+
+.font-h3 {
+  @extend .super-font;
+
+  font-family: $raleway;
+  font-weight: $ra3;
+  font-size: 23px;
+  color: $headline;
+  line-height: 15px;
+  letter-spacing: -0.6px;
+
+  @include breakpoint(desktop) {
+    font-size: 39px;
+  }
+}
+
+// MOBILE NAV:
+
+.font-mobile-nav {
+  @extend .super-font;
+  font-family: $raleway;
+  font-weight: $ra3;
+  font-size: 22px;
+  color: $oohblue;
+  //   line-height: 19px;
+  //   letter-spacing: -0.84px;
+}
+
+.font-mobile-subnav {
+  @extend .super-font;
+  font-family: $raleway;
+  font-weight: $ra3;
+  font-size: 16px;
+  color: $emerald;
+  //   line-height: 19px;
+  //   letter-spacing: -0.84px;
+}
+
+// DESKTOP NAV:
+.font-desk-nav {
+  @extend .super-font;
+  font-family: $raleway;
+  font-weight: $ra5;
+  font-size: 23px;
+  color: $oohblue;
+  //   line-height: 19px;
+  //   letter-spacing: -0.84px;
+}
+
+.font-desk-subnav {
+  @extend .super-font;
+  font-family: $raleway;
+  font-weight: $ra3;
+  font-size: 17px;
+  color: $emerald;
+
+  //   line-height: 19px;
+  //   letter-spacing: -0.84px;
+}
+
+.font-footer-main {
+  @extend .super-font;
+  font-family: $quicksand;
+  font-weight: $q7;
+  font-size: 18px;
+  color: $oohblue;
+  //   line-height: 19px;
+  //   letter-spacing: -0.64px;
+
+  @include breakpoint(desktop) {
+    font-size: 19px;
+    line-height: 19px;
+    letter-spacing: -0.1px;
+  }
+}
+
+.font-footer-sub {
+  @extend .super-font;
+  font-family: $quicksand;
+  font-weight: $q7;
+  font-size: 16px;
+  //   line-height: 19px;
+  //   letter-spacing: -0.64px;
+
+  @include breakpoint(desktop) {
+    font-size: 19px;
+    // line-height: 19px;
+    // letter-spacing: -0.1px;
+  }
+}
+
+.font-footer-some {
+  @extend .font-footer-sub;
+  color: $lightpeach;
+}
+
+.font-links {
+  @extend .super-font;
+  font-family: $raleway;
+  font-weight: $ra3;
+  font-size: 14px;
+  text-decoration: underline;
+  color: $oohblue;
+  //   line-height: 31px;
+  //   letter-spacing: -0.6px;
+  @include breakpoint(desktop) {
+    font-size: 36;
+  }
+}
+
+.font-blog-title {
+  @extend .super-font;
+  font-family: $raleway;
+  font-weight: $ra3;
+  font-size: 22px;
+  color: $headline;
+  //   line-height: 31px;
+  //   letter-spacing: -0.6px;
+  @include breakpoint(desktop) {
+    font-size: 26;
+  }
+}
+
+.font-blog-date {
+  @extend .super-font;
+  font-family: $raleway;
+  font-weight: $ra3;
+  font-size: 17px;
+  color: $oohblue;
+  //   line-height: 31px;
+  //   letter-spacing: -0.6px;
+}
+
+.font-blog-link {
+  @extend .super-font;
+  font-family: $raleway;
+  font-weight: $ra5;
+  font-size: 13px;
+  color: $oohblue;
+  //   line-height: 31px;
+  //   letter-spacing: -0.6px;
+  @include breakpoint(desktop) {
+    font-size: 14;
+  }
+}
+
+.font-blog-link {
+  @extend .super-font;
+  font-family: $raleway;
+  font-weight: $ro3;
+  font-size: 12px;
+  color: $emerald;
+  text-decoration: underline;
+  //   line-height: 31px;
+  //   letter-spacing: -0.6px;
+  @include breakpoint(desktop) {
+    font-size: 19;
+  }
+}
+
+.font-db-total {
+  @extend .super-font;
+  font-family: $raleway;
+  font-weight: $ro3;
+  font-size: 55px;
+  color: $oohblue;
+  @include breakpoint(desktop) {
+    font-size: 99;
+  }
+}
+
+.font-db-kg1 {
+  @extend .font-db-total;
+  font-size: 29px;
+  @include breakpoint(desktop) {
+    font-size: 50;
+  }
+}
+
+.font-db-latest {
+  @extend .font-db-total;
+  color: $headline;
+  @include breakpoint(desktop) {
+    font-size: 89;
+  }
+}
+
+.font-db-kg1 {
+  @extend .font-db-latest;
+  font-size: 29px;
+  @include breakpoint(desktop) {
+    font-size: 47;
+  }
+}
+
+.font-db-sub {
+  @extend .font-h3;
+
+  @include breakpoint(desktop) {
+    font-size: 33px;
+  }
+}
+
+.font-db-lasttitle {
+  @extend .super-font;
+  font-family: $raleway;
+  font-weight: $ra5;
+  font-size: 29px;
+  color: $headline;
+  @include breakpoint(desktop) {
+    font-size: 39px;
+  }
+}

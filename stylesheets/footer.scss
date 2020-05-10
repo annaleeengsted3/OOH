@@ -1,0 +1,75 @@
+@import "layout.scss";
+@import "fonts.scss";
+@import "colors.scss";
+
+footer {
+  @extend .site-padding;
+  background-color: $footerblue;
+  padding-top: $footerpaddingtopbottom;
+  padding-bottom: $footerpaddingtopbottom;
+  @include breakpoint(desktop) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+footer article {
+  padding-bottom: 30px;
+}
+
+footer article > * {
+  padding-bottom: 15px;
+}
+
+footer :last-child {
+  padding-bottom: 0px;
+}
+
+footer .contact-info {
+  @extend .font-footer-main;
+}
+footer .email,
+footer .phone-number {
+  @extend .font-footer-sub;
+  padding-left: 15px;
+}
+footer .email-icon {
+  background-image: url("../assets/mail-icon.svg");
+  width: 23px;
+  height: 23px;
+}
+
+footer .phone-icon {
+  background-image: url("../assets/phone-icon.svg");
+  width: 20px;
+  height: 20px;
+}
+
+footer .phone-details,
+footer .email-details {
+  display: flex;
+}
+
+footer .footer-some {
+  @extend .font-footer-sub;
+  display: flex;
+  justify-self: end;
+}
+footer .footer-some p {
+  color: $lightpeach;
+  padding-right: 20px;
+}
+
+footer .footer-links {
+  display: grid;
+  @include breakpoint(desktop) {
+    justify-self: center;
+  }
+}
+
+footer .footer-links a {
+  @extend .font-footer-main;
+}
+footer .footer-links a:hover {
+  text-decoration: underline;
+}

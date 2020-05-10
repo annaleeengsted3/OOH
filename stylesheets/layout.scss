@@ -1,0 +1,44 @@
+@import "colors.scss";
+$desktop: 1025px;
+$breakpoints: (
+  desktop: 1025px,
+  tablet: 750px,
+);
+$mobilefromheadertocontent: 95px;
+$mobilepaddingsides: 24px;
+$mobilpaddingtop: 25px;
+$mobilcontenttofooter: 95px;
+$mobilefooterpadding: 75px;
+
+$desktoppaddingtop: 85px;
+$desktoppaddingsides: 140px;
+
+$footerpaddingtopbottom: 60px;
+
+@mixin breakpoint($key) {
+  @if map-get($breakpoints, $key) {
+    @media all and (min-width: map-get($breakpoints, $key)) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+.site-padding {
+  padding-left: $mobilepaddingsides;
+  padding-right: $mobilepaddingsides;
+
+  @include breakpoint(desktop) {
+    padding-left: $desktoppaddingsides;
+    padding-right: $desktoppaddingsides;
+  }
+}
+
+body {
+  // @extend .site-padding;
+  background-color: $white;
+}
