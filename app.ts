@@ -1,12 +1,25 @@
 import "./stylesheets/global.scss";
-import ModuleDataLoader from "./ModuleDataLoader";
+import DataLoader from "./DataLoader";
 import ModuleHeader from "./ModuleHeader";
+import ModuleIndex from "./ModuleIndex";
+import { DataURLs } from "./DataURLs";
 
 export class App {
   private _viewport: number;
-  private _dataloader: ModuleDataLoader;
+  private _dataloader: DataLoader;
   private _header: ModuleHeader;
-  private _dataURL: string = "";
+  private _index: ModuleIndex;
+  private _dataURLs: {
+    index: string;
+    omos: string;
+    kommende_events: string;
+    viden: string;
+    affaldsdb: string;
+    spoerg_en_biolog: string;
+    viden_og_raad: string;
+    nyttige_links: string;
+    kontakt: string;
+  };
 
   constructor() {
     this.build();
@@ -17,13 +30,20 @@ export class App {
   }
 
   private awake = () => {
-    this.setViewport();
-    this._dataloader = new ModuleDataLoader();
+    this._viewport = this.setViewport();
+    this._dataURLs = new DataURLs().getURLS;
+    this.setupModules();
+
+    // this._dataloader = new ModuleDataLoader();
   };
 
   private setViewport() {
-    this._viewport = window.innerWidth;
+    return window.innerWidth;
+  }
+
+  private setupModules() {
     this._header = new ModuleHeader(this._viewport);
+    this._index = new ModuleIndex(this._dataURLs.index, this._viewport);
   }
 }
 

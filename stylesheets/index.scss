@@ -2,3 +2,32 @@
 @import "colors.scss";
 @import "fonts.scss";
 @import "header.scss";
+
+#index .pixi-container {
+  display: none;
+
+  @include breakpoint(desktop) {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+#index .index-logo-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#index .index-logo {
+  width: 211px;
+  height: 223px;
+  background-image: url("../assets/newlogo_white.svg");
+}
