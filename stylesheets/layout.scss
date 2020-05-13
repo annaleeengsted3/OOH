@@ -1,4 +1,3 @@
-@import "colors.scss";
 $desktop: 1025px;
 $breakpoints: (
   desktop: 1025px,
@@ -6,12 +5,13 @@ $breakpoints: (
 );
 $mobilefromheadertocontent: 95px;
 $mobilepaddingsides: 24px;
-$mobilpaddingtop: 25px;
+$mobilepaddingtop: 165px;
 $mobilcontenttofooter: 95px;
 $mobilefooterpadding: 75px;
 
 $desktoppaddingtop: 85px;
-$desktoppaddingsides: 140px;
+$desktoppaddingsides: 260px;
+$desktoptoptocontent: 350px;
 
 $footerpaddingtopbottom: 60px;
 

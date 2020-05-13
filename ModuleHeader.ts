@@ -25,11 +25,13 @@ export default class ModuleHeader {
   }
 
   private openNav = () => {
-    this._mobileLogo.classList.add(".hideAnim");
+    console.log("clicked open");
     this._mobilenav.style.width = this._navwidth;
+    this._mobileclose.style.display = "block";
   };
   private closeNav = () => {
+    console.log("clicked closed");
+    this._mobileclose.style.display = "none";
     this._mobilenav.style.width = "0vw";
-    this._mobileLogo.classList.remove(".hideAnim");
   };
 }

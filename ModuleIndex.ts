@@ -1,8 +1,22 @@
+import "./stylesheets/global.scss";
 import DataLoader from "./DataLoader";
+import { DataURLs } from "./DataURLs";
 import ModuleWaveEffect from "./ModuleWaveEffect";
 
 export default class ModuleIndex {
   private _url: string;
+  private _dataURLs: {
+    index: string;
+    omos: string;
+    hvem_er_vi: string;
+    kommende_events: string;
+    viden: string;
+    affaldsdb: string;
+    spoerg_en_biolog: string;
+    viden_og_raad: string;
+    nyttige_links: string;
+    kontakt: string;
+  };
   private _dataLoader: DataLoader;
   private _data: any;
   private _viewport: number;
@@ -30,10 +44,12 @@ export default class ModuleIndex {
     "#index .pixi-container"
   );
 
-  constructor(url: string, viewport: number) {
-    this._url = url;
+  constructor() {
+    this._dataURLs = new DataURLs().getURLS;
+    this._url = this._dataURLs.index;
+    this._viewport = window.innerWidth;
     this.getDatafromJSON();
-    if (viewport > 1025) {
+    if (this._viewport > 1025) {
       this.setupPixi();
     }
   }
@@ -66,3 +82,5 @@ export default class ModuleIndex {
     this._moduleEffect.awake();
   }
 }
+
+let index: ModuleIndex = new ModuleIndex();

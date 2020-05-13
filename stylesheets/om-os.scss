@@ -1,0 +1,191 @@
+@import "colors.scss";
+@import "global.scss";
+@import "layout.scss";
+@import "fonts.scss";
+$gridgap: 150px;
+
+body {
+  @include breakpoint(desktop) {
+    background-image: url("../assets/headerbg4.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+
+#om-os {
+  @extend .site-padding;
+  padding-top: $mobilepaddingtop;
+  min-height: 100vh;
+  @include breakpoint(desktop) {
+    padding-top: $desktoptoptocontent;
+  }
+}
+
+#om-os section {
+  margin-bottom: $spacingsections;
+  @include breakpoint(desktop) {
+    margin-bottom: $spacingsectionsdesktop;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: $gridgap;
+  }
+}
+
+#om-os h1 {
+  @extend .font-h1;
+  border-bottom: 2px solid $lightpeach;
+  margin-bottom: $spacingtitletocontent;
+}
+
+#om-os article {
+  @extend .font-p;
+  margin-bottom: $spacingelements;
+  //   padding-right: 140px;
+}
+
+#om-os img {
+  margin-bottom: $spacingelements;
+  @include breakpoint(desktop) {
+    margin-bottom: $spacingelementsdesktop;
+  }
+}
+
+#om-os h2 {
+  @extend .font-h2;
+  margin-bottom: $spacingtitletocontent;
+  border-bottom: 2px solid $lightpeach;
+}
+
+#om-os section.vores-mission h1 {
+  @include breakpoint(desktop) {
+    align-self: center;
+    // margin-top: 140px;
+    // grid-row: span 2;
+  }
+}
+
+#om-os section.vores-mission article.vores-mission {
+  grid-column: 2;
+}
+
+#om-os h3 {
+  @extend .font-h3;
+}
+
+#om-os .hvem-er-vi-container h2.hvem-er-vi-h2 {
+  @include breakpoint(desktop) {
+    align-self: start;
+  }
+}
+
+#om-os .hvem-er-vi-container .hvem-er-vi .volunteer h3 {
+  margin-bottom: 15px;
+  text-align: center;
+  @include breakpoint(desktop) {
+    padding-top: 33px;
+    text-align: left;
+  }
+}
+
+#om-os .hvem-er-vi-container .hvem-er-vi .volunteer img {
+  width: 60%;
+  padding-top: 44px;
+  margin-top: 26px;
+  float: right;
+  padding: 20px;
+  clip-path: circle();
+  shape-outside: circle();
+  @include breakpoint(desktop) {
+    width: 30%;
+  }
+}
+
+#om-os .hvem-er-vi-container .hvem-er-vi .volunteer div {
+  text-align: justify;
+}
+
+#om-os .vores-aktiviteter .vores-aktiviteter-h2 {
+  @include breakpoint(desktop) {
+    align-self: start;
+  }
+}
+#om-os .vores-aktiviteter .video-container {
+  margin-bottom: $spacingelements;
+}
+
+#om-os .vores-aktiviteter img.img-1 {
+  @include breakpoint(desktop) {
+    grid-column: 2;
+  }
+}
+#om-os .vores-aktiviteter h3.subtitle-3 {
+  @include breakpoint(desktop) {
+    grid-column: 1;
+  }
+}
+
+#om-os .vores-aktiviteter img.img-2 {
+  @include breakpoint(desktop) {
+    grid-column: 2;
+  }
+}
+
+#om-os .vores-aktiviteter .divider {
+  width: 100%;
+  border: 2px solid $lightpeach;
+  margin-bottom: $spacingelements;
+  @include breakpoint(desktop) {
+    display: none;
+  }
+}
+
+#om-os .vores-aktiviteter img.img-3 {
+  @include breakpoint(desktop) {
+    grid-column: 2;
+  }
+}
+
+#om-os section.galleri {
+  margin-bottom: $mobilcontenttofooter;
+  @include breakpoint(desktop) {
+    margin-bottom: $spacingcontenttofooterdesktop;
+  }
+}
+
+#om-os .galleri h2.galleri-h2 {
+  @include breakpoint(desktop) {
+    align-self: start;
+  }
+}
+
+#om-os .galleri .img-container {
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+#om-os .galleri .img-container img {
+  margin-bottom: 0;
+}
+
+#om-os .galleri .img-container h3 {
+  color: $oohblue;
+  position: absolute;
+  top: 2%;
+  left: 20%;
+  text-align: right;
+  margin-right: 4px;
+}
+
+#om-os .galleri .img-container h3 span {
+  font-weight: $ra5;
+  text-decoration: underline;
+}
+
+.load {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.visible {
+  opacity: 1;
+}

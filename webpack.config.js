@@ -25,12 +25,45 @@ const path = require("path");
 //   },
 // };
 
+// module.exports = {
+//   entry: path.join(__dirname, "/app.ts"),
+//   output: {
+//     filename: "app.js",
+//     path: __dirname,
+//   },
+//   module: {
+//     rules: [
+//       {
+//         test: /\.tsx?$/,
+//         loader: "ts-loader",
+//         exclude: /node_modules/,
+//       },
+//       {
+//         test: /\.(s*)css$/,
+//         use: ["style-loader", "css-loader", "sass-loader"],
+//       },
+//       {
+//         test: /\.(png|svg|jpg|gif)$/,
+//         use: ["file-loader"],
+//       },
+//     ],
+//   },
+//   resolve: {
+//     extensions: [".tsx", ".ts", ".js"],
+//   },
+// };
+
 module.exports = {
-  entry: path.join(__dirname, "/app.ts"),
-  output: {
-    filename: "app.js",
-    path: __dirname,
+  entry: {
+    base: "./app.ts",
+    index: "./ModuleIndex.ts",
+    about: "./ModuleOmOs.ts",
   },
+  output: {
+    path: __dirname + "/dist",
+    filename: "[name].bundle.js",
+  },
+  mode: "development",
   module: {
     rules: [
       {
@@ -40,15 +73,15 @@ module.exports = {
       },
       {
         test: /\.(s*)css$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
-      },
-      {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: ["file-loader"],
+        loader: "ignore-loader",
       },
     ],
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
   },
+  devServer: {
+    contentBase: "dist",
+  },
+  watch: true,
 };

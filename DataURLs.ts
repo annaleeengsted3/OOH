@@ -2,6 +2,7 @@ export class DataURLs {
   private _URLS: {
     index: string;
     omos: string;
+    hvem_er_vi: string;
     kommende_events: string;
     viden: string;
     affaldsdb: string;
@@ -12,6 +13,7 @@ export class DataURLs {
   } = {
     index: "http://osomhavet.dk/wordpress/wp-json/wp/v2/forside_billeder/",
     omos: "http://osomhavet.dk/wordpress/wp-json/wp/v2/om_os/",
+    hvem_er_vi: "http://osomhavet.dk/wordpress/wp-json/wp/v2/hvem_er_vi/",
     kommende_events:
       "http://osomhavet.dk/wordpress/wp-json/wp/v2/kommende_events/",
     viden: "http://osomhavet.dk/wordpress/wp-json/wp/v2/viden_navigation/",

@@ -1,6 +1,8 @@
-@import "layout.scss";
 @import "colors.scss";
+@import "global.scss";
+@import "layout.scss";
 @import "fonts.scss";
+@import "footer.scss";
 
 $navHeight: 55;
 $btnTopmarg: 8;
@@ -17,6 +19,7 @@ header {
   position: absolute;
   width: 100vw;
   z-index: 3;
+  padding-top: 27px;
   @include breakpoint(desktop) {
     padding-top: $desktoppaddingtop;
     display: grid;
@@ -25,13 +28,13 @@ header {
   }
 }
 
-.mobile {
+#mobile {
   @include breakpoint(desktop) {
     display: none;
   }
 }
 
-.overlay {
+header #mobile .overlay {
   height: 100%;
   width: 0;
   position: fixed;
@@ -43,7 +46,7 @@ header {
   transition: 0.5s;
 }
 
-.overlay-content {
+header #mobile .overlay .overlay-content {
   @extend .site-padding;
   margin-top: 0;
   position: absolute;
@@ -53,7 +56,7 @@ header {
   // margin-top: $mobilmargintop;
 }
 
-.overlay a {
+header #mobile .overlay .overlay-content a {
   @extend.font-mobile-nav;
   cursor: pointer;
   padding: 0 0;
@@ -62,26 +65,27 @@ header {
   transition: 0.3s;
 }
 
-.overlay a.sublink {
+header #mobile .overlay .overlay-content a.sublink {
   @extend .font-mobile-subnav;
   padding-bottom: 12px;
   margin-left: 10px;
 }
-.overlay a.sublink:nth-child(5),
-.overlay a.sublink:nth-child(11) {
+header #mobile .overlay .overlay-content a.sublink:nth-child(5),
+header #mobile .overlay .overlay-content a.sublink:nth-child(11) {
   padding-bottom: 20px;
 }
 
-.overlay .closebtn {
+header #mobile .overlay .closebtn {
   font-family: sans-serif;
   color: $oohblue;
   position: absolute;
   margin-top: $btnTopmarg + px;
   right: $btnRightmarg + px;
   font-size: $navHeight + px;
+  display: none;
 }
 
-.openbtn {
+header #mobile .openbtn {
   // @extend .font-footer-main;
   color: $oohblue;
   position: absolute;
@@ -124,10 +128,10 @@ header {
   opacity: 1;
   transition: opacity 2.3s;
   @include breakpoint(desktop) {
-    background-image: url("../assets/newlogo.svg");
+    background-image: url("../assets/logo_oohblue.svg");
     margin: 0 0;
-    width: 65px;
-    height: 64px;
+    width: 85px;
+    height: 84px;
   }
 }
 
@@ -145,21 +149,18 @@ header {
   }
 }
 
-.desk_main {
+header nav .desktop a.desk_main,
+header nav .desktop .dropdown a.desk_main {
   @extend .font-desk-nav;
   margin-left: 80px;
   white-space: nowrap;
 }
 
-// .desk_main:hover{
-
-// }
-
-.dropdown-content a {
-  @extend .font-mobile-subnav;
+header nav .desktop .dropdown .dropdown-content a {
   float: none;
   text-align: right;
   margin-top: 22px;
+  @extend .font-mobile-subnav;
 }
 
 .dropdown {
@@ -169,7 +170,12 @@ header {
 .dropdown:hover .dropdown-content {
   visibility: visible;
   opacity: 1;
+
   // display: grid;
+}
+
+.dropdown:hover #om-os {
+  opacity: 0.1;
 }
 
 .dropdown-content {
