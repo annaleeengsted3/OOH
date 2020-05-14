@@ -9,6 +9,7 @@ export default class ModuleOmOs {
     omos: string;
     hvem_er_vi: string;
     kommende_events: string;
+    komm_events_billeder: string;
     viden: string;
     affaldsdb: string;
     spoerg_en_biolog: string;

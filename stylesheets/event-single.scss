@@ -1,0 +1,213 @@
+@import "colors.scss";
+@import "global.scss";
+@import "layout.scss";
+@import "fonts.scss";
+$gridgap: 150px;
+
+body {
+  @include breakpoint(desktop) {
+    background-image: url("../assets/headerbg4.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+
+#event {
+  padding-top: $mobilepaddingtop;
+  padding-bottom: $mobilcontenttofooter;
+  min-height: 100vh;
+  @include breakpoint(desktop) {
+    padding-top: $desktoptoptocontent;
+    padding-bottom: $spacingcontenttofooterdesktop;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: $gridgap;
+    margin-left: $desktoppaddingsides;
+    margin-right: $desktoppaddingsides;
+  }
+}
+
+#event img {
+  margin-bottom: $spacingelements;
+  @include breakpoint(desktop) {
+    margin-bottom: $spacingelements;
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+}
+
+#event h1 {
+  @extend .site-padding;
+  @extend .font-h1;
+  border-bottom: 2px solid $lightpeach;
+  margin-bottom: $spacingtitletocontent;
+  white-space: nowrap;
+  @include breakpoint(desktop) {
+    align-self: center;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+#event section {
+  margin-bottom: $spacingsections;
+  @include breakpoint(desktop) {
+    margin-bottom: $spacingsectionsdesktop;
+  }
+}
+
+#event h3 {
+  @extend .site-padding;
+  @extend .font-h3;
+  margin-bottom: $spacingsections;
+  @include breakpoint(desktop) {
+    align-self: center;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+#event article {
+  @extend .font-p;
+  margin-bottom: 25px;
+  //   padding-right: 140px;
+}
+
+#event .events-container {
+  @include breakpoint(desktop) {
+    grid-column: 2/3;
+  }
+}
+
+#event .subtitles {
+  @include breakpoint(desktop) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+
+#event .events-container article.event {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 5px;
+}
+#event .events-container article.event .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 18px 0px 0px 18px;
+  background-color: $eventbg;
+  padding: 10px 10px;
+  text-align: center;
+  @include breakpoint(desktop) {
+    padding: 40px 10px;
+  }
+}
+#event .events-container article.event .left h3 {
+  @extend .font-events-day;
+  margin-bottom: 0px;
+  @include breakpoint(desktop) {
+    // border-bottom: 2px solid $lightpeach;
+    margin-bottom: 10px;
+  }
+}
+#event .events-container article.event .left p.month {
+  @extend .font-events-month;
+  text-align: center;
+  @include breakpoint(desktop) {
+    margin-bottom: 5px;
+  }
+}
+#event .events-container article.event .left p.time {
+  @extend .font-events-time;
+  text-align: center;
+}
+
+#event .events-container article.event .right {
+  border-radius: 0px 18px 18px 0px;
+  background-color: $eventbg;
+  padding: 10px 10px;
+  @include breakpoint(desktop) {
+    padding: 40px 10px;
+  }
+}
+
+#event .events-container article.event .right h3 {
+  @extend .font-events-location;
+  margin-bottom: 13px;
+  margin-left: 0px;
+  margin-right: 0px;
+  @include breakpoint(desktop) {
+    text-align: left;
+  }
+}
+
+#event .events-container article.event .right p {
+  @extend .font-events-p;
+  margin-bottom: 18px;
+}
+#event .events-container article.event .right div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#event .events-container article.event .right .bold {
+  text-decoration: underline;
+  @include breakpoint(desktop) {
+    margin-bottom: 45px;
+  }
+}
+
+#event .events-container article.event .right a {
+  @extend .font-button;
+  min-width: 100px;
+  height: 32px;
+  border-radius: 18px;
+  padding: 4px 6px;
+  background-color: $button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include breakpoint(desktop) {
+    padding: 20px 20px;
+    transition: transform 0.9s ease;
+  }
+}
+
+#event .events-container article.event .right a:hover {
+  transform: translateY(2px);
+}
+
+#event .events-container article.event .right a.fb-button {
+  @extend .font-button;
+  background-color: $buttonfb;
+  margin-left: 10px;
+}
+
+#event .events-container article.event .right a.fb-button svg {
+  width: 16px;
+  height: 16px;
+  @include breakpoint(desktop) {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+  }
+}
+
+#event h3 span.bold-link {
+  font-weight: $ra5;
+  text-decoration: underline;
+  color: $darkpeach;
+}
+
+.load {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.visible {
+  opacity: 1;
+}

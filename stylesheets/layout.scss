@@ -3,7 +3,7 @@ $breakpoints: (
   desktop: 1025px,
   tablet: 750px,
 );
-$mobilefromheadertocontent: 95px;
+
 $mobilepaddingsides: 24px;
 $mobilepaddingtop: 165px;
 $mobilcontenttofooter: 95px;
@@ -11,7 +11,7 @@ $mobilefooterpadding: 75px;
 
 $desktoppaddingtop: 85px;
 $desktoppaddingsides: 260px;
-$desktoptoptocontent: 350px;
+$desktoptoptocontent: 320px;
 
 $footerpaddingtopbottom: 60px;
 
@@ -29,12 +29,12 @@ $footerpaddingtopbottom: 60px;
 }
 
 .site-padding {
-  padding-left: $mobilepaddingsides;
-  padding-right: $mobilepaddingsides;
+  margin-left: $mobilepaddingsides;
+  margin-right: $mobilepaddingsides;
 
   @include breakpoint(desktop) {
-    padding-left: $desktoppaddingsides;
-    padding-right: $desktoppaddingsides;
+    margin-left: $desktoppaddingsides;
+    margin-right: $desktoppaddingsides;
   }
 }
 

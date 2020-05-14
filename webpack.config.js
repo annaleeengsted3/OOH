@@ -58,6 +58,8 @@ module.exports = {
     base: "./app.ts",
     index: "./ModuleIndex.ts",
     about: "./ModuleOmOs.ts",
+    events: "./ModuleKommendeEvents.ts",
+    event: "./ModuleEvent.ts",
   },
   output: {
     path: __dirname + "/dist",

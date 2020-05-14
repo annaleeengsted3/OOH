@@ -4,6 +4,7 @@ export class DataURLs {
     omos: string;
     hvem_er_vi: string;
     kommende_events: string;
+    komm_events_billeder: string;
     viden: string;
     affaldsdb: string;
     spoerg_en_biolog: string;
@@ -16,6 +17,8 @@ export class DataURLs {
     hvem_er_vi: "http://osomhavet.dk/wordpress/wp-json/wp/v2/hvem_er_vi/",
     kommende_events:
       "http://osomhavet.dk/wordpress/wp-json/wp/v2/kommende_events/",
+    komm_events_billeder:
+      "http://osomhavet.dk/wordpress/wp-json/wp/v2/komm_events-forside_",
     viden: "http://osomhavet.dk/wordpress/wp-json/wp/v2/viden_navigation/",
     affaldsdb: "http://osomhavet.dk/wordpress/wp-json/wp/v2/affalds-database/",
     spoerg_en_biolog:

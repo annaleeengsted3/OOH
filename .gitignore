@@ -1,6 +1,6 @@
 node_modules/
 package-lock.json
-assets/
-dist/
-global.css.map
+dist/assets/
+*.css.map
 global.css
+
