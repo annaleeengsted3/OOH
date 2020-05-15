@@ -60,6 +60,7 @@ module.exports = {
     about: "./ModuleOmOs.ts",
     events: "./ModuleKommendeEvents.ts",
     event: "./ModuleEvent.ts",
+    viden: "./ModuleViden.ts",
   },
   output: {
     path: __dirname + "/dist",

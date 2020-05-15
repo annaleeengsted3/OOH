@@ -27,12 +27,43 @@ body {
   }
 }
 
+#event .map iframe {
+  width: 100%;
+  margin-bottom: $spacingelements;
+}
+#event .map {
+  @include breakpoint(tablet) {
+    padding-left: $desktoppaddingsides;
+    padding-right: $desktoppaddingsides;
+  }
+  @include breakpoint(desktop) {
+    padding-left: 0px;
+    padding-right: 0px;
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+}
+
 #event img {
   margin-bottom: $spacingelements;
+  @include breakpoint(tablet) {
+    padding-left: $desktoppaddingsides;
+    padding-right: $desktoppaddingsides;
+  }
   @include breakpoint(desktop) {
+    padding-left: 0px;
+    padding-right: 0px;
     margin-bottom: $spacingelements;
     grid-row: 1/2;
     grid-column: 2/3;
+  }
+}
+
+#event .info {
+  @include breakpoint(desktop) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin-bottom: $spacingelements;
   }
 }
 
@@ -48,6 +79,16 @@ body {
     margin-right: 0px;
   }
 }
+.text,
+.fb-button,
+.details {
+  @extend .site-padding;
+  margin-bottom: $spacingelements;
+  @include breakpoint(desktop) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
 
 #event section {
   margin-bottom: $spacingsections;
@@ -56,45 +97,35 @@ body {
   }
 }
 
-#event h3 {
-  @extend .site-padding;
+#event h2 {
   @extend .font-h3;
-  margin-bottom: $spacingsections;
+  @extend .site-padding;
+  font-size: 25px;
+  margin-bottom: 10px;
   @include breakpoint(desktop) {
-    align-self: center;
     margin-left: 0px;
     margin-right: 0px;
+    text-align: left;
+    font-size: 34px;
   }
 }
 
-#event article {
+#event .text {
   @extend .font-p;
-  margin-bottom: 25px;
-  //   padding-right: 140px;
 }
 
-#event .events-container {
-  @include breakpoint(desktop) {
-    grid-column: 2/3;
-  }
-}
-
-#event .subtitles {
-  @include breakpoint(desktop) {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-}
-
-#event .events-container article.event {
+#event .details {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 5px;
+  @include breakpoint(desktop) {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    grid-template-columns: 1fr;
+    justify-self: end;
+  }
 }
-#event .events-container article.event .left {
+#event .details .left {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,98 +134,82 @@ body {
   padding: 10px 10px;
   text-align: center;
   @include breakpoint(desktop) {
-    padding: 40px 10px;
+    padding: 0px;
+    background-color: transparent;
+    text-align: right;
   }
 }
-#event .events-container article.event .left h3 {
+#event .details .left h3 {
   @extend .font-events-day;
   margin-bottom: 0px;
   @include breakpoint(desktop) {
-    // border-bottom: 2px solid $lightpeach;
     margin-bottom: 10px;
   }
 }
-#event .events-container article.event .left p.month {
+#event .details .left p.month {
   @extend .font-events-month;
   text-align: center;
   @include breakpoint(desktop) {
     margin-bottom: 5px;
+    text-align: right;
   }
 }
-#event .events-container article.event .left p.time {
+#event .details .left p.time {
   @extend .font-events-time;
   text-align: center;
+  @include breakpoint(desktop) {
+    text-align: right;
+  }
 }
 
-#event .events-container article.event .right {
+#event .details .right {
   border-radius: 0px 18px 18px 0px;
   background-color: $eventbg;
   padding: 10px 10px;
   @include breakpoint(desktop) {
     padding: 40px 10px;
+    background-color: transparent;
+    text-align: right;
+    padding: 0px;
   }
 }
 
-#event .events-container article.event .right h3 {
-  @extend .font-events-location;
-  margin-bottom: 13px;
-  margin-left: 0px;
-  margin-right: 0px;
-  @include breakpoint(desktop) {
-    text-align: left;
-  }
-}
-
-#event .events-container article.event .right p {
+#event .details .right p {
   @extend .font-events-p;
-  margin-bottom: 18px;
-}
-#event .events-container article.event .right div {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-#event .events-container article.event .right .bold {
   text-decoration: underline;
+  margin-top: 10px;
   @include breakpoint(desktop) {
-    margin-bottom: 45px;
+    margin-bottom: 20px;
   }
 }
 
-#event .events-container article.event .right a {
+#event a:hover {
+  transform: translateY(2px);
+}
+
+#event a.fb-button {
   @extend .font-button;
-  min-width: 100px;
-  height: 32px;
+  width: 50%;
   border-radius: 18px;
-  padding: 4px 6px;
+  padding: 8px 8px;
   background-color: $button;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: $buttonfb;
   @include breakpoint(desktop) {
-    padding: 20px 20px;
+    padding: 13px 15px;
     transition: transform 0.9s ease;
   }
 }
 
-#event .events-container article.event .right a:hover {
-  transform: translateY(2px);
-}
-
-#event .events-container article.event .right a.fb-button {
-  @extend .font-button;
-  background-color: $buttonfb;
-  margin-left: 10px;
-}
-
-#event .events-container article.event .right a.fb-button svg {
+#event a.fb-button svg {
   width: 16px;
   height: 16px;
+  margin-left: 5px;
   @include breakpoint(desktop) {
     width: 20px;
     height: 20px;
-    margin-left: 5px;
   }
 }
 

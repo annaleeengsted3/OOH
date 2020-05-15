@@ -84,7 +84,7 @@ a:active {
   //   letter-spacing: 0;
 
   @include breakpoint(desktop) {
-    padding-top: $titletoppaddingdesktop;
+    // padding-top: $titletoppaddingdesktop;
     padding-bottom: $borderpadding;
     font-size: 43px;
     text-align: right;
@@ -219,13 +219,14 @@ a:active {
   @extend .super-font;
   font-family: $raleway;
   font-weight: $ra3;
-  font-size: 14px;
+  font-size: 28px;
   text-decoration: underline;
   color: $oohblue;
-  //   line-height: 31px;
-  //   letter-spacing: -0.6px;
+  @include breakpoint(tablet) {
+    font-size: 25px;
+  }
   @include breakpoint(desktop) {
-    font-size: 36px;
+    font-size: 30px;
   }
 }
 
@@ -355,7 +356,7 @@ a:active {
 }
 .font-events-time {
   @extend .font-events-month;
-  font-size: 13px;
+  font-size: 15px;
   @include breakpoint(desktop) {
     font-size: 24px;
     font-weight: $ra3;
@@ -373,7 +374,7 @@ a:active {
   @extend .super-font;
   font-family: $roboto;
   font-weight: $ro3;
-  font-size: 14px;
+  font-size: 15px;
   @include breakpoint(desktop) {
     font-size: 19px;
   }
@@ -383,7 +384,7 @@ a:active {
   @extend .super-font;
   font-family: $roboto;
   font-weight: $ro7;
-  font-size: 13px;
+  font-size: 15px;
   text-align: center;
   color: $white;
   -webkit-box-shadow: 3px 10px 18px -9px rgba(0, 0, 0, 0.54);
@@ -398,6 +399,6 @@ a:active {
   @extend .font-button;
   font-size: 9px;
   @include breakpoint(desktop) {
-    font-size: 16px;
+    font-size: 15px;
   }
 }

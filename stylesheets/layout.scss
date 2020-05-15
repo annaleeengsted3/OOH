@@ -9,8 +9,10 @@ $mobilepaddingtop: 165px;
 $mobilcontenttofooter: 95px;
 $mobilefooterpadding: 75px;
 
+$tabletpaddingsides: 110px;
+
 $desktoppaddingtop: 85px;
-$desktoppaddingsides: 260px;
+$desktoppaddingsides: 200px;
 $desktoptoptocontent: 320px;
 
 $footerpaddingtopbottom: 60px;
@@ -32,6 +34,11 @@ $footerpaddingtopbottom: 60px;
   margin-left: $mobilepaddingsides;
   margin-right: $mobilepaddingsides;
 
+  @include breakpoint(tablet) {
+    margin-left: $desktoppaddingsides;
+    margin-right: $desktoppaddingsides;
+  }
+
   @include breakpoint(desktop) {
     margin-left: $desktoppaddingsides;
     margin-right: $desktoppaddingsides;
@@ -41,4 +48,10 @@ $footerpaddingtopbottom: 60px;
 body {
   // @extend .site-padding;
   background-color: $white;
+}
+
+.box-shadow {
+  -webkit-box-shadow: 3px 10px 18px -9px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: 3px 10px 18px -9px rgba(0, 0, 0, 0.54);
+  box-shadow: 3px 10px 18px -9px rgba(0, 0, 0, 0.54);
 }

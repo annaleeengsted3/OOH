@@ -22,10 +22,10 @@ export default class ModuleEvent {
 
   private _dataLoader: DataLoader;
   private _data: any;
-  private _imgs: any;
-
-  private _viewport: number;
   private _e_image: HTMLImageElement = document.querySelector("#event img");
+  private _event_link: HTMLAnchorElement = document.querySelector(
+    "#event a.fb-button"
+  );
 
   constructor() {
     this._dataURLs = new DataURLs().getURLS;
@@ -50,15 +50,36 @@ export default class ModuleEvent {
   }
 
   private showData() {
+    document.querySelector(
+      "title"
+    ).textContent += `Event: ${this._data.title.rendered}`;
     this._e_image.src = `${this._data.event_billede.guid}`;
     this._e_image.alt = `${this._data.event_billede.post_title}`;
     document.querySelector(
+      "#event .info h2"
+    ).innerHTML = `${this._data.title.rendered}`;
+    document.querySelector(
+      "#event .info div.text"
+    ).innerHTML = `${this._data.eventbeskrivelse}`;
+    document.querySelector(
+      "#event .details div.left h3"
+    ).innerHTML = `${this._data.dato}`;
+    document.querySelector(
+      "#event .details div.left .month"
+    ).innerHTML = `${this._data.dato_maaned}`;
+    document.querySelector(
+      "#event .details div.left .time"
+    ).innerHTML = `${this._data.dato_tidsinterval}`;
+    document.querySelector(
+      "#event .details div.right .line1"
+    ).innerHTML = `${this._data.adresse}`;
+    document.querySelector(
+      "#event .details div.right .line2"
+    ).innerHTML = `${this._data.adresse_2}`;
+    this._event_link.href = `${this._data.fb_link}`;
+    document.querySelector(
       "#event div.map"
     ).innerHTML = `${this._data.google_maps}`;
-    //    this._desktop.setAttribute(
-    //      "srcset",
-    //      `${this._data[0].desktop_fallback.guid}`
-    //    );
   }
 }
 

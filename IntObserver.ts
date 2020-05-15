@@ -14,7 +14,6 @@ export class IntObserver {
 
     let observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        console.log(entry);
         if (entry.intersectionRatio > 0.25) {
           entry.target.classList.add("visible");
         } else {

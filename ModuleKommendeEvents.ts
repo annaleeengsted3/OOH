@@ -93,11 +93,6 @@ export default class ModuleKommendeEvents {
     });
 
     this._ke_image.src = `${this._imgs[0].forside_billede.guid}`;
-
-    //    this._desktop.setAttribute(
-    //      "srcset",
-    //      `${this._data[0].desktop_fallback.guid}`
-    //    );
   }
 }
 

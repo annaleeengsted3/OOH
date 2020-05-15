@@ -23,9 +23,10 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Raleway:wght@100;300;500;700&family=Roboto:wght@100;300;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles/event-single.css" />
+    <!-- <link rel="stylesheet" href="styles/om-os.css" /> -->
+    <link rel="stylesheet" href="styles/viden.css" />
     <link rel="stylesheet" href="styles/header.css" />
-    <title></title>
+    <title>Kommende Events - Os Om Havet</title>
   </head>
 
   <body>
@@ -115,56 +116,32 @@
       </nav>
     </header>
 
-    <section id="event">
-      <h1>EVENT</h1>
+    <section id="viden">
+      <h1>VIDEN</h1>
 
-      <div class="info">
-        <h2></h2>
-        <div class="text"></div>
-        <a href="" class="fb-button" target="_blank"
-          >Meld dig til på:
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="8"
-            height="9.089"
-            viewBox="0 0 8 9.089"
-          >
-            <g transform="translate(-0.394 0.455)">
-              <rect
-                width="8"
-                height="9"
-                transform="translate(0.394 -0.455)"
-                fill="none"
-              />
-              <path
-                d="M82.87,8.468V4.61h1.317L84.375,3.1H82.87V2.164c0-.423.141-.753.753-.753h.8V.047C84.234.047,83.764,0,83.246,0a1.816,1.816,0,0,0-1.929,1.976V3.1H80V4.61h1.317V8.468Z"
-                transform="translate(-77.927 0.167)"
-                fill="#f8f9fa"
-                fill-rule="evenodd"
-              />
-            </g>
-          </svg>
-        </a>
+      <section class="viden-nav"></section>
+      <div class="subtitles">
+        <h3 class="subtitle-1 load">
+          Hvad samler vi ind af affald fra havets bind?
+        </h3>
+        <h3 class="subtitle-2 load">
+          Hvad kan du selv gøre for at give naturen en hjælpende hånd?
+        </h3>
+        <h3 class="subtitle-2 load">
+          Hvis ikke du kan finde svaret her, så
+          <span class="bold-link">stil os dit spørgsmål!</span>
+        </h3>
       </div>
-      <div class="details">
-        <div class="left load">
-          <h3></h3>
-          <div>
-            <p class="month"></p>
-            <p class="time"></p>
-          </div>
-        </div>
-
-        <div class="right">
-          <p class="bold line1"></p>
-          <p class="bold line2"></p>
-        </div>
-      </div>
-
-      <div class="map load"></div>
-
-      <img src="" alt="" class="load" />
+      <div class="images"></div>
     </section>
+
+    <template>
+      <div class="img-container">
+        <img src="" alt="" />
+        <div class="mask"></div>
+        <h3></h3>
+      </div>
+    </template>
 
     <footer>
       <article class="contact-info">
@@ -175,9 +152,7 @@
         </div>
         <div class="email-details">
           <div class="email-icon"></div>
-          <a href="mailto:kontakt@osomhavet.dk" class="email"
-            >kontakt@osomhavet.dk</a
-          >
+          <p class="email">kontakt@osomhavet.dk</p>
         </div>
       </article>
       <article class="footer-links">
@@ -197,6 +172,6 @@
       </article>
     </footer>
     <script src="base.bundle.js" type="text/javascript"></script>
-    <script src="event.bundle.js" type="text/javascript"></script>
+    <script src="viden.bundle.js" type="text/javascript"></script>
   </body>
 </html>
