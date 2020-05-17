@@ -2,10 +2,10 @@ export class IntObserver {
   private elms: NodeListOf<HTMLElement>;
   constructor(elements: NodeListOf<HTMLElement>) {
     this.elms = elements;
-    this.setupIntObserver();
+    this.setupIntObserver(this.elms);
   }
 
-  private setupIntObserver() {
+  private setupIntObserver(elements: NodeListOf<HTMLElement>) {
     let config: any = {
       root: null, //document.querySelector('#some-element')
       rootMargin: "0px",
@@ -22,7 +22,7 @@ export class IntObserver {
       });
     }, config);
 
-    this.elms.forEach((elem) => {
+    elements.forEach((elem) => {
       observer.observe(elem);
     });
   }

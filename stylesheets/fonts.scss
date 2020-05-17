@@ -58,7 +58,7 @@ a:active {
 
   font-family: $roboto;
   font-weight: $ro3;
-  font-size: 15px;
+  font-size: 16px;
   color: $oohblue;
   //   line-height: 15px;
   //   letter-spacing: -0.48px;
@@ -234,12 +234,12 @@ a:active {
   @extend .super-font;
   font-family: $raleway;
   font-weight: $ra3;
-  font-size: 22px;
+  font-size: 23px;
   color: $headline;
   //   line-height: 31px;
   //   letter-spacing: -0.6px;
   @include breakpoint(desktop) {
-    font-size: 26px;
+    font-size: 32px;
   }
 }
 
@@ -253,7 +253,7 @@ a:active {
   //   letter-spacing: -0.6px;
 }
 
-.font-blog-link {
+.font-blog-category {
   @extend .super-font;
   font-family: $raleway;
   font-weight: $ra5;
@@ -268,9 +268,9 @@ a:active {
 
 .font-blog-link {
   @extend .super-font;
-  font-family: $raleway;
+  font-family: $roboto;
   font-weight: $ro3;
-  font-size: 12px;
+  font-size: 19px;
   color: $emerald;
   text-decoration: underline;
   //   line-height: 31px;
@@ -307,7 +307,7 @@ a:active {
   }
 }
 
-.font-db-kg1 {
+.font-db-kg2 {
   @extend .font-db-latest;
   font-size: 29px;
   @include breakpoint(desktop) {
@@ -387,9 +387,6 @@ a:active {
   font-size: 15px;
   text-align: center;
   color: $white;
-  -webkit-box-shadow: 3px 10px 18px -9px rgba(0, 0, 0, 0.54);
-  -moz-box-shadow: 3px 10px 18px -9px rgba(0, 0, 0, 0.54);
-  box-shadow: 3px 10px 18px -9px rgba(0, 0, 0, 0.54);
   @include breakpoint(desktop) {
     font-size: 23px;
   }

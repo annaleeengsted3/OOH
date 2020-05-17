@@ -17,6 +17,8 @@ $desktoptoptocontent: 320px;
 
 $footerpaddingtopbottom: 60px;
 
+$desktopmarginHeader: 200px;
+
 @mixin breakpoint($key) {
   @if map-get($breakpoints, $key) {
     @media all and (min-width: map-get($breakpoints, $key)) {
@@ -54,4 +56,21 @@ body {
   -webkit-box-shadow: 3px 10px 18px -9px rgba(0, 0, 0, 0.54);
   -moz-box-shadow: 3px 10px 18px -9px rgba(0, 0, 0, 0.54);
   box-shadow: 3px 10px 18px -9px rgba(0, 0, 0, 0.54);
+}
+
+.button {
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 25px;
+  min-height: 32px;
+  @include breakpoint(desktop) {
+    padding: 8px 20px;
+    transition: transform 0.9s ease;
+  }
+}
+
+img {
+  @extend .box-shadow;
 }

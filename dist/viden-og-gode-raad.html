@@ -24,13 +24,13 @@
       rel="stylesheet"
     />
     <!-- <link rel="stylesheet" href="styles/om-os.css" /> -->
-    <link rel="stylesheet" href="styles/viden.css" />
+    <link rel="stylesheet" href="styles/vidensblog.css" />
     <link rel="stylesheet" href="styles/header.css" />
-    <title>Viden - Os Om Havet</title>
+    <title>Viden og Gode Råd - Os Om Havet</title>
   </head>
 
   <body>
-    <header>
+    <header class="load">
       <a href="index.html">
         <div class="logo_con mLogo"></div>
       </a>
@@ -116,31 +116,32 @@
       </nav>
     </header>
 
-    <section id="viden">
-      <h1>VIDEN</h1>
-      <!-- FIX THIS: -->
-      <section class="viden-nav"></section>
-      <div class="subtitles">
-        <h3 class="subtitle-1 load">
-          Hvad samler vi ind af affald fra havets bind?
-        </h3>
-        <h3 class="subtitle-2 load">
-          Hvad kan du selv gøre for at give naturen en hjælpende hånd?
-        </h3>
-        <h3 class="subtitle-2 load">
-          Hvis ikke du kan finde svaret her, så
-          <span class="bold-link">stil os dit spørgsmål!</span>
-        </h3>
+    <section>
+      <div class="sidebar">
+        <h1>VIDEN & GODE RÅD</h1>
+
+        <a class="back" href="viden.html">Tilbage til viden</a>
+        <div class="filter">
+          <p>Filtrer efter:</p>
+          <div class="buttons">
+            <button data-category="alle" class="active">Alle</button>
+            <button data-category="Gode Råd">Gode Råd</button>
+            <button data-category="Viden">Viden</button>
+          </div>
+        </div>
       </div>
-      <div class="images"></div>
+      <div class="blog-posts"></div>
     </section>
 
     <template>
-      <div class="img-container">
-        <img src="" alt="" />
-        <div class="mask"></div>
+      <article class="load">
         <h3></h3>
-      </div>
+        <p class="date"></p>
+        <div class="content"></div>
+        <a href="" target="_blank"></a>
+        <img src="" alt="" />
+        <p class="category-con">Kategori: <span class="category"></span></p>
+      </article>
     </template>
 
     <footer>
@@ -172,6 +173,6 @@
       </article>
     </footer>
     <script src="base.bundle.js" type="text/javascript"></script>
-    <script src="viden.bundle.js" type="text/javascript"></script>
+    <script src="vidensblog.bundle.js" type="text/javascript"></script>
   </body>
 </html>

@@ -61,6 +61,8 @@ module.exports = {
     events: "./ModuleKommendeEvents.ts",
     event: "./ModuleEvent.ts",
     viden: "./ModuleViden.ts",
+    vidensblog: "./ModuleVidensBlog.ts",
+    database: "./ModuleAffaldsDatabase.ts",
   },
   output: {
     path: __dirname + "/dist",
