@@ -23,17 +23,6 @@ $spacingcontenttofooterdesktop: 220px;
 $borderpadding: 15px;
 $titletoppaddingdesktop: 100px;
 
-// $dynamic-font-reference-size: 1600;
-
-// @function dynamicFontSize($site-width, $reference-width, $font-size) {
-//   @if $useFluid == false {
-//     @return $font-size;
-//   }
-//   @return calc(
-//     #{$font-size}px +
-//       ((#{$site-width} - #{$reference-width}px) * 0.0005 * #{$font-size})
-//   );
-// }
 a {
   text-decoration: none;
 }
@@ -50,7 +39,6 @@ a:active {
   -moz-osx-font-smoothing: grayscale;
   //   position: relative;
   color: $oohblue;
-  //   left: -0.05em;
 }
 
 .font-p {
@@ -60,14 +48,9 @@ a:active {
   font-weight: $ro3;
   font-size: 16px;
   color: $oohblue;
-  //   line-height: 15px;
-  //   letter-spacing: -0.48px;
-  // left: -0.03em;
 
   @include breakpoint(desktop) {
     font-size: 19px;
-    // line-height: 19px;
-    // letter-spacing: -0.64px;
   }
 }
 
@@ -80,16 +63,12 @@ a:active {
   color: $headline;
   border-bottom: 2px solid $lightpeach;
   margin-bottom: $spacingtitletocontent;
-  //   line-height: 23px;
-  //   letter-spacing: 0;
 
   @include breakpoint(desktop) {
     // padding-top: $titletoppaddingdesktop;
     padding-bottom: $borderpadding;
     font-size: 43px;
     text-align: right;
-    // line-height: 23px;
-    // letter-spacing: 1px;
   }
 }
 
@@ -102,9 +81,6 @@ a:active {
   color: $headline;
   margin-bottom: $spacingtitletocontent;
   border-bottom: 2px solid $lightpeach;
-  //   line-height: 29px;
-  //   letter-spacing: -1.04px;
-  //   left: -0.03em;
 
   @include breakpoint(desktop) {
     padding-top: $titletoppaddingdesktop;
@@ -112,8 +88,6 @@ a:active {
     font-size: 43px;
     font-weight: $ra7;
     text-align: right;
-    // letter-spacing: -2px;
-    // left: -0.26em;
   }
 }
 
@@ -125,8 +99,6 @@ a:active {
   font-size: 23px;
   color: $headline;
   margin-bottom: $spacingesubtitles;
-  // line-height: 15px;
-  // letter-spacing: -0.6px;
 
   @include breakpoint(desktop) {
     text-align: right;
@@ -142,8 +114,6 @@ a:active {
   font-weight: $ra3;
   font-size: 22px;
   color: $oohblue;
-  //   line-height: 19px;
-  //   letter-spacing: -0.84px;
 }
 
 .font-mobile-subnav {
@@ -152,8 +122,6 @@ a:active {
   font-weight: $ra3;
   font-size: 16px;
   color: $emerald;
-  //   line-height: 19px;
-  //   letter-spacing: -0.84px;
 }
 
 // DESKTOP NAV:
@@ -164,8 +132,6 @@ a:active {
   font-size: 23px;
   color: $oohblue;
   margin-left: 80px;
-  //   line-height: 19px;
-  //   letter-spacing: -0.84px;
 }
 
 .font-desk-subnav {
@@ -174,9 +140,6 @@ a:active {
   font-weight: $ra3;
   font-size: 17px;
   color: $emerald;
-
-  //   line-height: 19px;
-  //   letter-spacing: -0.84px;
 }
 
 .font-footer-main {
@@ -185,8 +148,6 @@ a:active {
   font-weight: $q7;
   font-size: 18px;
   color: $oohblue;
-  //   line-height: 19px;
-  //   letter-spacing: -0.64px;
 
   @include breakpoint(desktop) {
     font-size: 19px;
@@ -200,13 +161,9 @@ a:active {
   font-family: $quicksand;
   font-weight: $q7;
   font-size: 16px;
-  //   line-height: 19px;
-  //   letter-spacing: -0.64px;
 
   @include breakpoint(desktop) {
     font-size: 19px;
-    // line-height: 19px;
-    // letter-spacing: -0.1px;
   }
 }
 
@@ -236,8 +193,7 @@ a:active {
   font-weight: $ra3;
   font-size: 23px;
   color: $headline;
-  //   line-height: 31px;
-  //   letter-spacing: -0.6px;
+
   @include breakpoint(desktop) {
     font-size: 32px;
   }
@@ -249,8 +205,6 @@ a:active {
   font-weight: $ra3;
   font-size: 17px;
   color: $oohblue;
-  //   line-height: 31px;
-  //   letter-spacing: -0.6px;
 }
 
 .font-blog-category {
@@ -259,8 +213,7 @@ a:active {
   font-weight: $ra5;
   font-size: 13px;
   color: $oohblue;
-  //   line-height: 31px;
-  //   letter-spacing: -0.6px;
+
   @include breakpoint(desktop) {
     font-size: 14px;
   }
@@ -273,8 +226,7 @@ a:active {
   font-size: 19px;
   color: $emerald;
   text-decoration: underline;
-  //   line-height: 31px;
-  //   letter-spacing: -0.6px;
+
   @include breakpoint(desktop) {
     font-size: 19px;
   }

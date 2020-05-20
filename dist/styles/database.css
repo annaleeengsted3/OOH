@@ -572,7 +572,6 @@ a.back::before {
 
 img.imgA {
   box-shadow: none;
-  animation: fade 5500ms both;
   opacity: 1;
 }
 

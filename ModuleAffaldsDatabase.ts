@@ -63,7 +63,6 @@ export default class ModuleAffaldsDatabase {
     document.querySelector(".content").innerHTML = data[0].tekstbeskrivelse;
     this._image.src = data[0].billede.guid;
     this._image.alt = data[0].billede.post_title;
-
     this.startCounter();
   }
 
