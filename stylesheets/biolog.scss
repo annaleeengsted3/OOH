@@ -31,7 +31,8 @@ section {
 .sidebar,
 article,
 h3,
-p.content {
+.content,
+section .email {
   @extend .site-padding;
   @include breakpoint(tablet) {
     margin-left: $tabletpaddingsides;
@@ -57,64 +58,23 @@ h1 {
   @extend .font-h1;
   margin-bottom: 15px;
 }
-.details {
-  @extend .font-db-kg1;
-  margin-top: -11px;
-}
-.details h2 {
-  border-bottom: 2px solid $darkpeach;
-  @extend .font-db-kg1;
-}
-.details .big {
-  @extend .font-db-total;
-}
-.latest-wrapper {
-  @include breakpoint(tablet) {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    margin-bottom: $spacingelementsdesktop;
-  }
-}
-
-.latest-wrapper h2 {
-  @extend .font-db-kg2;
-}
-.latest-wrapper .latest-sub {
-  @extend .font-db-sub;
-  margin-bottom: 0px;
-  @include breakpoint(tablet) {
-    text-align: left;
-  }
-}
-
-.latest-wrapper h2 .latest-kg {
-  @extend .font-db-latest;
-}
-.latest {
-  @extend .font-db-latest;
-  font-size: 29px;
-  @include breakpoint(tablet) {
-    font-size: 60px;
-  }
-}
 
 .subtitle {
   @extend .font-h3;
-  text-decoration: underline;
-  text-decoration-color: $darkpeach;
+
   @include breakpoint(tablet) {
     grid-column: 1/2;
-    grid-row: 4/5;
+    grid-row: 2/3;
   }
 }
 
-p.content {
+div.content {
   @extend .font-p;
   margin-bottom: $spacingelements;
   @include breakpoint(tablet) {
     margin-bottom: $spacingelementsdesktop;
     grid-column: 2/3;
-    grid-row: 4/5;
+    grid-row: 2/3;
   }
 }
 
@@ -134,62 +94,6 @@ a.back::before {
   height: 19px;
   padding-right: 5px;
 }
-.counter-wrapper {
-  position: relative;
-  margin-bottom: $spacingelements;
-  @include breakpoint(tablet) {
-    margin-bottom: $spacingelementsdesktop;
-  }
-}
-
-.img-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-}
-.img-wrapper .imgB,
-.imgA {
-  grid-column: 1/2;
-  grid-row: 1/2;
-}
-
-img.imgA {
-  box-shadow: none;
-  animation: fade 5500ms both;
-  //   transition: opacity 2s ease;
-  opacity: 1;
-}
-
-// header:hover img.imgA {
-//   opacity: 0 !important;
-// }
-@keyframes fade {
-  to {
-    opacity: 0;
-  }
-}
-
-.counter-wrapper {
-  position: relative;
-}
-article.details {
-  position: absolute;
-  top: 0;
-  left: 0;
-  @include breakpoint(tablet) {
-    padding: 20px;
-  }
-}
-
-.data-viz {
-  margin-bottom: $spacingelements;
-  @include breakpoint(tablet) {
-    margin-bottom: $spacingelementsdesktop;
-    grid-column: 2/3;
-    grid-row: 3/4;
-    margin-bottom: $spacingelementsdesktop;
-  }
-}
 
 h3 span.bold-link {
   font-weight: $ra5;
@@ -197,10 +101,41 @@ h3 span.bold-link {
   color: $darkpeach;
 }
 
+img.img1 {
+  display: none;
+  margin-bottom: $spacingelements;
+  @include breakpoint(tablet) {
+    margin-bottom: $spacingelementsdesktop;
+    display: block;
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+}
+
 img.img2 {
   @include breakpoint(tablet) {
     grid-column: 2/3;
     grid-row: 5/6;
+  }
+}
+
+section .email {
+  @extend .font-footer-main;
+  display: inline-block;
+  margin-bottom: $spacingelements;
+  @include breakpoint(tablet) {
+    margin-bottom: $spacingelementsdesktop;
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+}
+section .footer-some {
+  display: flex;
+  margin-bottom: $spacingelements;
+  @include breakpoint(tablet) {
+    margin-bottom: $spacingelementsdesktop;
+    grid-column: 2/3;
+    grid-row: 4/5;
   }
 }
 

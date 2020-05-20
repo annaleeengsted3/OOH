@@ -1,6 +1,7 @@
 import DataLoader from "./DataLoader";
 import { DataURLs } from "./DataURLs";
 import { IntObserver } from "./IntObserver";
+import counterUp from "counterup2";
 
 export default class ModuleAffaldsDatabase {
   private _url: string;
@@ -24,6 +25,10 @@ export default class ModuleAffaldsDatabase {
   private _watchelements: NodeListOf<HTMLElement>;
   private _image: HTMLImageElement = document.querySelector(".img2");
   private _dataviz: HTMLImageElement = document.querySelector(".data-viz");
+  private _imgA: HTMLImageElement = document.querySelector("img.imgA");
+  private _countelement: HTMLElement = document.querySelector(
+    ".details .counter"
+  );
 
   constructor() {
     this._dataURLs = new DataURLs().getURLS;
@@ -45,7 +50,6 @@ export default class ModuleAffaldsDatabase {
   }
 
   private showData(data: any) {
-    console.log(data);
     document.querySelector(".big").innerHTML = data[0].kg_indsamlet_affald;
     document.querySelector(".latest").innerHTML =
       data[0].sidste_events_lokation;
@@ -59,6 +63,16 @@ export default class ModuleAffaldsDatabase {
     document.querySelector(".content").innerHTML = data[0].tekstbeskrivelse;
     this._image.src = data[0].billede.guid;
     this._image.alt = data[0].billede.post_title;
+
+    this.startCounter();
+  }
+
+  private startCounter() {
+    counterUp(this._countelement, {
+      duration: 2000,
+      delay: 50,
+    });
+    this._imgA.style.animation = "fade 6000ms both";
   }
 }
 

@@ -63,6 +63,8 @@ module.exports = {
     viden: "./ModuleViden.ts",
     vidensblog: "./ModuleVidensBlog.ts",
     database: "./ModuleAffaldsDatabase.ts",
+    biolog: "./ModuleBiolog.ts",
+    kontakt: "./ModuleKontakt.ts",
   },
   output: {
     path: __dirname + "/dist",

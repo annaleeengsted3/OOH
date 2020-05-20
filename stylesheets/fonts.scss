@@ -17,7 +17,7 @@ $spacingesubtitles: 25px;
 $spacingsections: 63px;
 
 $spacingsectionsdesktop: 120px;
-$spacingelementsdesktop: 95px;
+$spacingelementsdesktop: 65px;
 $spacingcontenttofooterdesktop: 220px;
 
 $borderpadding: 15px;
@@ -283,7 +283,7 @@ a:active {
 .font-db-total {
   @extend .super-font;
   font-family: $raleway;
-  font-weight: $ro3;
+  font-weight: $ra5;
   font-size: 55px;
   color: $oohblue;
   @include breakpoint(desktop) {
@@ -293,6 +293,7 @@ a:active {
 
 .font-db-kg1 {
   @extend .font-db-total;
+  font-weight: $ra3;
   font-size: 29px;
   @include breakpoint(desktop) {
     font-size: 50px;
