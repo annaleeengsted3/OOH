@@ -10,23 +10,68 @@ video {
   width: 100%;
 }
 
+body {
+  scroll-behavior: smooth;
+}
+
+button {
+  background-color: transparent;
+  outline: 0;
+  border: none;
+}
+
+button:active {
+  outline: 0;
+}
+
+button:focus {
+  outline: 0;
+}
+
 * {
   box-sizing: border-box;
 }
 
 .site-padding {
-  padding-left: 24px;
-  padding-right: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+@media all and (min-width: 750px) {
+  .site-padding {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
 }
 @media all and (min-width: 1025px) {
   .site-padding {
-    padding-left: 140px;
-    padding-right: 140px;
+    margin-left: 200px;
+    margin-right: 200px;
   }
 }
 
 body {
   background-color: #fafaf8;
+}
+
+.box-shadow, img {
+  -webkit-box-shadow: 3px 10px 18px -9px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: 3px 10px 18px -9px rgba(0, 0, 0, 0.54);
+  box-shadow: 3px 10px 18px -9px rgba(0, 0, 0, 0.54);
+}
+
+.button {
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 25px;
+  min-height: 32px;
+}
+@media all and (min-width: 1025px) {
+  .button {
+    padding: 8px 20px;
+    transition: transform 0.9s ease;
+  }
 }
 
 a {
@@ -41,17 +86,16 @@ a:active {
   color: #fab080;
 }
 
-.super-font, .font-db-lasttitle, .font-db-total, .font-db-latest, .font-db-kg1, .font-blog-link, .font-blog-date, .font-blog-title, .font-links, .font-footer-sub, .font-footer-some, .font-footer-main, .font-desk-subnav, .font-desk-nav, .font-mobile-subnav, .font-mobile-nav, .font-h3, .font-db-sub, .font-h2, .font-h1, .font-p {
+.super-font, .font-button, .font-button-fb, .font-events-p, .font-events-month, .font-events-location, .font-events-time, .font-events-day, .font-db-lasttitle, .font-db-total, .font-db-latest, .font-db-kg2, .font-db-kg1, .font-blog-link, .font-blog-category, .font-blog-date, .font-blog-title, .font-links, .font-footer-sub, .font-footer-some, .font-footer-main, .font-desk-subnav, .font-desk-nav, .font-mobile-subnav, .font-mobile-nav, .font-h3, .font-db-sub, .font-h2, .font-h1, .font-p {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #004b69;
-  margin: 0;
 }
 
 .font-p {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 16px;
   color: #004b69;
 }
 @media all and (min-width: 1025px) {
@@ -65,10 +109,14 @@ a:active {
   font-weight: 700;
   font-size: 33px;
   color: #829fb1;
+  border-bottom: 2px solid #fddbc5;
+  margin-bottom: 50px;
 }
 @media all and (min-width: 1025px) {
   .font-h1 {
+    padding-bottom: 15px;
     font-size: 43px;
+    text-align: right;
   }
 }
 
@@ -77,11 +125,16 @@ a:active {
   font-weight: 500;
   font-size: 29px;
   color: #829fb1;
+  margin-bottom: 50px;
+  border-bottom: 2px solid #fddbc5;
 }
 @media all and (min-width: 1025px) {
   .font-h2 {
+    padding-top: 100px;
+    padding-bottom: 15px;
     font-size: 43px;
     font-weight: 700;
+    text-align: right;
   }
 }
 
@@ -90,10 +143,12 @@ a:active {
   font-weight: 300;
   font-size: 23px;
   color: #829fb1;
+  margin-bottom: 25px;
 }
 @media all and (min-width: 1025px) {
   .font-h3, .font-db-sub {
-    font-size: 39px;
+    text-align: right;
+    font-size: 34px;
   }
 }
 
@@ -158,25 +213,30 @@ a:active {
 .font-links {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 28px;
   text-decoration: underline;
   color: #004b69;
 }
+@media all and (min-width: 750px) {
+  .font-links {
+    font-size: 25px;
+  }
+}
 @media all and (min-width: 1025px) {
   .font-links {
-    font-size: 36px;
+    font-size: 30px;
   }
 }
 
 .font-blog-title {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
-  font-size: 22px;
+  font-size: 23px;
   color: #829fb1;
 }
 @media all and (min-width: 1025px) {
   .font-blog-title {
-    font-size: 26px;
+    font-size: 32px;
   }
 }
 
@@ -187,22 +247,22 @@ a:active {
   color: #004b69;
 }
 
-.font-blog-link {
+.font-blog-category {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 13px;
   color: #004b69;
 }
 @media all and (min-width: 1025px) {
-  .font-blog-link {
+  .font-blog-category {
     font-size: 14px;
   }
 }
 
 .font-blog-link {
-  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 19px;
   color: #277684;
   text-decoration: underline;
 }
@@ -212,19 +272,20 @@ a:active {
   }
 }
 
-.font-db-total, .font-db-latest, .font-db-kg1 {
+.font-db-total, .font-db-latest, .font-db-kg2, .font-db-kg1 {
   font-family: "Raleway", sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 55px;
   color: #004b69;
 }
 @media all and (min-width: 1025px) {
-  .font-db-total, .font-db-latest, .font-db-kg1 {
+  .font-db-total, .font-db-latest, .font-db-kg2, .font-db-kg1 {
     font-size: 99px;
   }
 }
 
 .font-db-kg1 {
+  font-weight: 300;
   font-size: 29px;
 }
 @media all and (min-width: 1025px) {
@@ -233,20 +294,20 @@ a:active {
   }
 }
 
-.font-db-latest, .font-db-kg1 {
+.font-db-latest, .font-db-kg2 {
   color: #829fb1;
 }
 @media all and (min-width: 1025px) {
-  .font-db-latest, .font-db-kg1 {
+  .font-db-latest, .font-db-kg2 {
     font-size: 89px;
   }
 }
 
-.font-db-kg1 {
+.font-db-kg2 {
   font-size: 29px;
 }
 @media all and (min-width: 1025px) {
-  .font-db-kg1 {
+  .font-db-kg2 {
     font-size: 47px;
   }
 }
@@ -266,6 +327,81 @@ a:active {
 @media all and (min-width: 1025px) {
   .font-db-lasttitle {
     font-size: 39px;
+  }
+}
+
+.font-events-day {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 55px;
+}
+@media all and (min-width: 1025px) {
+  .font-events-day {
+    font-size: 56px;
+  }
+}
+
+.font-events-month, .font-events-location, .font-events-time {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+}
+@media all and (min-width: 1025px) {
+  .font-events-month, .font-events-location, .font-events-time {
+    font-size: 27px;
+    font-weight: 500;
+  }
+}
+
+.font-events-time {
+  font-size: 15px;
+}
+@media all and (min-width: 1025px) {
+  .font-events-time {
+    font-size: 24px;
+    font-weight: 300;
+  }
+}
+
+.font-events-location {
+  font-weight: 500;
+}
+@media all and (min-width: 1025px) {
+  .font-events-location {
+    font-size: 30px;
+  }
+}
+
+.font-events-p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+}
+@media all and (min-width: 1025px) {
+  .font-events-p {
+    font-size: 19px;
+  }
+}
+
+.font-button, .font-button-fb {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  color: #fafaf8;
+}
+@media all and (min-width: 1025px) {
+  .font-button, .font-button-fb {
+    font-size: 23px;
+  }
+}
+
+.font-button-fb {
+  font-size: 9px;
+}
+@media all and (min-width: 1025px) {
+  .font-button-fb {
+    font-size: 15px;
   }
 }
 
@@ -297,6 +433,41 @@ a:active {
   width: 211px;
   height: 223px;
   background-image: url("../assets/newlogo_white.svg");
+}
+
+@media all and (min-width: 1025px) {
+  picture {
+    display: none;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .imgA {
+    opacity: 1;
+    transition: opacity 2s ease;
+  }
+}
+
+.img-wrapper {
+  display: none;
+}
+@media all and (min-width: 1025px) {
+  .img-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
+.imgA,
+.imgB {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  box-shadow: none;
+}
+
+.fade {
+  opacity: 0;
 }
 
 /*# sourceMappingURL=index.css.map */

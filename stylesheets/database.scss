@@ -2,15 +2,6 @@
 @import "global.scss";
 @import "layout.scss";
 @import "fonts.scss";
-$gridgap: 100px;
-
-body {
-  @include breakpoint(desktop) {
-    background-image: url("../assets/headerbg4.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
-}
 
 section {
   padding-top: $mobilepaddingtop;
@@ -135,6 +126,10 @@ a.back::before {
   padding-right: 5px;
 }
 .counter-wrapper {
+  // background-image: url("./assets/affaldsdblink.jpg");
+  // background-size: cover;
+  // width: 100%;
+  // height: 100%;
   position: relative;
   margin-bottom: $spacingelements;
   @include breakpoint(tablet) {
@@ -147,27 +142,15 @@ a.back::before {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
-.img-wrapper .imgB,
-.imgA {
+.img-wrapper .imgA {
   grid-column: 1/2;
   grid-row: 1/2;
-}
-
-img.imgA {
-  box-shadow: none;
-  animation: fade 5500ms both;
-  //   transition: opacity 2s ease;
-  opacity: 1;
+  opacity: 0.9;
 }
 
 // header:hover img.imgA {
 //   opacity: 0 !important;
 // }
-@keyframes fade {
-  to {
-    opacity: 0;
-  }
-}
 
 .counter-wrapper {
   position: relative;
@@ -177,7 +160,7 @@ article.details {
   top: 0;
   left: 0;
   @include breakpoint(tablet) {
-    padding: 20px;
+    padding: 0px 20px;
   }
 }
 

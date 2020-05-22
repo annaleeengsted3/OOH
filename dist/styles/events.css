@@ -36,10 +36,16 @@ button:focus {
   margin-left: 24px;
   margin-right: 24px;
 }
+@media all and (min-width: 750px) {
+  .site-padding, #kommende-events h3, #kommende-events h1 {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+}
 @media all and (min-width: 1025px) {
   .site-padding, #kommende-events h3, #kommende-events h1 {
-    margin-left: 260px;
-    margin-right: 260px;
+    margin-left: 150px;
+    margin-right: 150px;
   }
 }
 
@@ -47,19 +53,47 @@ body {
   background-color: #fafaf8;
 }
 
+.box-shadow, #kommende-events .events-container article.event .right a, #kommende-events .events-container article.event .right, #kommende-events .events-container article.event .left, img {
+  -webkit-box-shadow: 3px 10px 18px -9px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: 3px 10px 18px -9px rgba(0, 0, 0, 0.54);
+  box-shadow: 3px 10px 18px -9px rgba(0, 0, 0, 0.54);
+}
+
+.button {
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 25px;
+  min-height: 32px;
+}
+@media all and (min-width: 1025px) {
+  .button {
+    padding: 8px 20px;
+    transition: transform 0.9s ease;
+  }
+}
+
+p {
+  max-width: 600px;
+}
+
 a {
   text-decoration: none;
+  color: #277684;
+  font-weight: 700;
 }
 
 a:hover {
-  color: #277684;
+  text-decoration: underline;
+  text-decoration-color: #fab080;
 }
 
 a:active {
   color: #fab080;
 }
 
-.super-font, .font-button, #kommende-events .events-container article.event .right a.fb-button, #kommende-events .events-container article.event .right a, .font-button-fb, .font-events-p, #kommende-events .events-container article.event .right p, .font-events-month, #kommende-events .events-container article.event .left p.month, .font-events-location, #kommende-events .events-container article.event .right h3, .font-events-time, #kommende-events .events-container article.event .left p.time, .font-events-day, #kommende-events .events-container article.event .left h3, .font-db-lasttitle, .font-db-total, .font-db-latest, .font-db-kg1, .font-blog-link, .font-blog-date, .font-blog-title, .font-links, .font-footer-sub, .font-footer-some, .font-footer-main, .font-desk-subnav, .font-desk-nav, .font-mobile-subnav, .font-mobile-nav, .font-h3, #kommende-events h3, .font-db-sub, .font-h2, .font-h1, #kommende-events h1, .font-p, #kommende-events article {
+.super-font, .font-button, #kommende-events .events-container article.event .right a.fb-button, #kommende-events .events-container article.event .right a, .font-button-fb, .font-events-p, #kommende-events .events-container article.event .right p, .font-events-month, #kommende-events .events-container article.event .left p.month, .font-events-location, #kommende-events .events-container article.event .right h3, .font-events-time, #kommende-events .events-container article.event .left p.time, .font-events-day, #kommende-events .events-container article.event .left h3, .font-db-lasttitle, .font-db-total, .font-db-latest, .font-db-kg2, .font-db-kg1, .font-blog-link, .font-blog-category, .font-blog-date, .font-blog-title, .font-links, .font-footer-sub, .font-footer-some, .font-footer-main, .font-desk-subnav, .font-desk-nav, .font-mobile-subnav, .font-mobile-nav, .font-h3, #kommende-events h3, .font-db-sub, .font-h2, .font-h1, #kommende-events h1, .font-p, #kommende-events article {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #004b69;
@@ -68,12 +102,13 @@ a:active {
 .font-p, #kommende-events article {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-size: 15px;
+  font-size: 16px;
   color: #004b69;
 }
 @media all and (min-width: 1025px) {
   .font-p, #kommende-events article {
-    font-size: 19px;
+    font-size: 20px;
+    line-height: 25px;
   }
 }
 
@@ -87,9 +122,8 @@ a:active {
 }
 @media all and (min-width: 1025px) {
   .font-h1, #kommende-events h1 {
-    padding-top: 100px;
     padding-bottom: 15px;
-    font-size: 43px;
+    font-size: 40px;
     text-align: right;
   }
 }
@@ -106,7 +140,7 @@ a:active {
   .font-h2 {
     padding-top: 100px;
     padding-bottom: 15px;
-    font-size: 43px;
+    font-size: 37px;
     font-weight: 700;
     text-align: right;
   }
@@ -122,7 +156,7 @@ a:active {
 @media all and (min-width: 1025px) {
   .font-h3, #kommende-events h3, .font-db-sub {
     text-align: right;
-    font-size: 34px;
+    font-size: 28px;
   }
 }
 
@@ -137,13 +171,13 @@ a:active {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
   font-size: 16px;
-  color: #277684;
 }
 
 .font-desk-nav {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
-  font-size: 23px;
+  letter-spacing: 2px;
+  font-size: 19px;
   color: #004b69;
   margin-left: 80px;
 }
@@ -187,25 +221,30 @@ a:active {
 .font-links {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 28px;
   text-decoration: underline;
   color: #004b69;
 }
+@media all and (min-width: 750px) {
+  .font-links {
+    font-size: 25px;
+  }
+}
 @media all and (min-width: 1025px) {
   .font-links {
-    font-size: 36px;
+    font-size: 30px;
   }
 }
 
 .font-blog-title {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
-  font-size: 22px;
+  font-size: 23px;
   color: #829fb1;
 }
 @media all and (min-width: 1025px) {
   .font-blog-title {
-    font-size: 26px;
+    font-size: 32px;
   }
 }
 
@@ -216,22 +255,22 @@ a:active {
   color: #004b69;
 }
 
-.font-blog-link {
+.font-blog-category {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 13px;
   color: #004b69;
 }
 @media all and (min-width: 1025px) {
-  .font-blog-link {
+  .font-blog-category {
     font-size: 14px;
   }
 }
 
 .font-blog-link {
-  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 19px;
   color: #277684;
   text-decoration: underline;
 }
@@ -241,19 +280,20 @@ a:active {
   }
 }
 
-.font-db-total, .font-db-latest, .font-db-kg1 {
+.font-db-total, .font-db-latest, .font-db-kg2, .font-db-kg1 {
   font-family: "Raleway", sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 55px;
   color: #004b69;
 }
 @media all and (min-width: 1025px) {
-  .font-db-total, .font-db-latest, .font-db-kg1 {
+  .font-db-total, .font-db-latest, .font-db-kg2, .font-db-kg1 {
     font-size: 99px;
   }
 }
 
 .font-db-kg1 {
+  font-weight: 300;
   font-size: 29px;
 }
 @media all and (min-width: 1025px) {
@@ -262,20 +302,20 @@ a:active {
   }
 }
 
-.font-db-latest, .font-db-kg1 {
+.font-db-latest, .font-db-kg2 {
   color: #829fb1;
 }
 @media all and (min-width: 1025px) {
-  .font-db-latest, .font-db-kg1 {
+  .font-db-latest, .font-db-kg2 {
     font-size: 89px;
   }
 }
 
-.font-db-kg1 {
+.font-db-kg2 {
   font-size: 29px;
 }
 @media all and (min-width: 1025px) {
-  .font-db-kg1 {
+  .font-db-kg2 {
     font-size: 47px;
   }
 }
@@ -322,7 +362,7 @@ a:active {
 }
 
 .font-events-time, #kommende-events .events-container article.event .left p.time {
-  font-size: 13px;
+  font-size: 15px;
 }
 @media all and (min-width: 1025px) {
   .font-events-time, #kommende-events .events-container article.event .left p.time {
@@ -343,7 +383,7 @@ a:active {
 .font-events-p, #kommende-events .events-container article.event .right p {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 15px;
 }
 @media all and (min-width: 1025px) {
   .font-events-p, #kommende-events .events-container article.event .right p {
@@ -354,16 +394,13 @@ a:active {
 .font-button, #kommende-events .events-container article.event .right a.fb-button, #kommende-events .events-container article.event .right a, .font-button-fb {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 15px;
   text-align: center;
   color: #fafaf8;
-  -webkit-box-shadow: 3px 10px 18px -9px rgba(0, 0, 0, 0.54);
-  -moz-box-shadow: 3px 10px 18px -9px rgba(0, 0, 0, 0.54);
-  box-shadow: 3px 10px 18px -9px rgba(0, 0, 0, 0.54);
 }
 @media all and (min-width: 1025px) {
   .font-button, #kommende-events .events-container article.event .right a.fb-button, #kommende-events .events-container article.event .right a, .font-button-fb {
-    font-size: 23px;
+    font-size: 21px;
   }
 }
 
@@ -372,15 +409,7 @@ a:active {
 }
 @media all and (min-width: 1025px) {
   .font-button-fb {
-    font-size: 16px;
-  }
-}
-
-@media all and (min-width: 1025px) {
-  body {
-    background-image: url("../assets/headerbg4.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
+    font-size: 15px;
   }
 }
 
@@ -391,13 +420,13 @@ a:active {
 }
 @media all and (min-width: 1025px) {
   #kommende-events {
-    padding-top: 320px;
+    padding-top: 250px;
     padding-bottom: 220px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 150px;
-    margin-left: 260px;
-    margin-right: 260px;
+    grid-template-columns: 3fr 5fr;
+    column-gap: 100px;
+    margin-left: 150px;
+    margin-right: 150px;
   }
 }
 
@@ -406,7 +435,7 @@ a:active {
 }
 @media all and (min-width: 1025px) {
   #kommende-events img {
-    margin-bottom: 40px;
+    margin-bottom: 55px;
     grid-row: 1/2;
     grid-column: 2/3;
   }
@@ -550,6 +579,7 @@ a:active {
 }
 
 #kommende-events .events-container article.event .right a {
+  text-decoration: none;
   min-width: 100px;
   height: 32px;
   border-radius: 18px;

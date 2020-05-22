@@ -70,18 +70,15 @@ export default class ModuleOmOs {
   private populateEmployees() {
     let dest: HTMLElement = document.querySelector("#om-os .hvem-er-vi");
     dest.innerHTML = "";
-
+    let temp: HTMLTemplateElement = document.querySelector("template");
     this._employees.forEach((volunteer) => {
-      let template = `
-      
-                        <article class = "volunteer load">
-                        <img src = "${volunteer.billede.guid}" alt="${volunteer.billede.post_title}">
-                        <h3 class="volunteer-1">${volunteer.navn}</h3>
-<div class="volunteer_txt">${volunteer.beskrivelse}
+      let clone = <HTMLElement>temp.content.cloneNode(true);
+      clone.querySelector("h3").innerHTML = volunteer.navn;
+      clone.querySelector("img").src = volunteer.billede.guid;
+      clone.querySelector("div.volunteer_txt").innerHTML =
+        volunteer.beskrivelse;
 
-                        </article>
-`;
-      dest.insertAdjacentHTML("beforeend", template);
+      dest.appendChild(clone);
     });
 
     //Vores mission section

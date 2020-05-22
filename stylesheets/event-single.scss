@@ -2,15 +2,6 @@
 @import "global.scss";
 @import "layout.scss";
 @import "fonts.scss";
-$gridgap: 150px;
-
-body {
-  @include breakpoint(desktop) {
-    background-image: url("../assets/headerbg4.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
-}
 
 #event {
   padding-top: $mobilepaddingtop;
@@ -20,7 +11,7 @@ body {
     padding-top: $desktoptoptocontent;
     padding-bottom: $spacingcontenttofooterdesktop;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 3fr 5fr;
     column-gap: $gridgap;
     margin-left: $desktoppaddingsides;
     margin-right: $desktoppaddingsides;
@@ -107,11 +98,15 @@ body {
     margin-right: 0px;
     text-align: left;
     font-size: 34px;
+    margin-bottom: $spacingelements;
   }
 }
 
 #event .text {
   @extend .font-p;
+  @include breakpoint(desktop) {
+    margin-bottom: $spacingelementsdesktop;
+  }
 }
 
 #event .details {
@@ -201,6 +196,9 @@ body {
     padding: 13px 15px;
     transition: transform 0.9s ease;
   }
+}
+#event a.fb-button:hover {
+  text-decoration: none;
 }
 
 #event a.fb-button svg {

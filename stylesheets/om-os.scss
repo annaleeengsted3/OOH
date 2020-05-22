@@ -2,15 +2,6 @@
 @import "global.scss";
 @import "layout.scss";
 @import "fonts.scss";
-$gridgap: 150px;
-
-body {
-  @include breakpoint(desktop) {
-    background-image: url("../assets/headerbg4.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
-}
 
 #om-os {
   @extend .site-padding;
@@ -21,12 +12,18 @@ body {
   }
 }
 
+strong {
+  @include breakpoint(desktop) {
+    font-size: 21px;
+  }
+}
+
 #om-os section {
   margin-bottom: $spacingsections;
   @include breakpoint(desktop) {
     margin-bottom: $spacingsectionsdesktop;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 3fr 5fr;
     column-gap: $gridgap;
   }
 }
@@ -59,8 +56,6 @@ body {
 #om-os section.vores-mission h1 {
   @include breakpoint(desktop) {
     align-self: center;
-    // margin-top: 140px;
-    // grid-row: span 2;
   }
 }
 
@@ -77,32 +72,50 @@ body {
     align-self: start;
   }
 }
+#om-os .hvem-er-vi-container .hvem-er-vi .volunteer {
+  @include breakpoint(desktop) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-bottom: 0px;
+  }
+}
 
 #om-os .hvem-er-vi-container .hvem-er-vi .volunteer h3 {
   margin-bottom: 15px;
   text-align: center;
   @include breakpoint(desktop) {
-    padding-top: 33px;
+    // padding-top: 33px;
     text-align: left;
+    // grid-column: 1/2;
+    // grid-row: 1/2;
+  }
+}
+#om-os .hvem-er-vi-container .hvem-er-vi .volunteer .wrapper {
+  @include breakpoint(desktop) {
+    grid-column: 1/2;
+    grid-row: 1/2;
   }
 }
 
 #om-os .hvem-er-vi-container .hvem-er-vi .volunteer img {
-  width: 60%;
-  padding-top: 44px;
-  margin-top: 26px;
+  @extend .box-shadow;
+  width: 50%;
+  margin-top: 30px;
+  // padding-top: 44px;
+  // margin-top: 26px;
   float: right;
-  padding: 20px;
+  padding: 5px;
   clip-path: circle();
   shape-outside: circle();
   @include breakpoint(desktop) {
-    width: 30%;
+    margin-top: 0px;
+    width: 80%;
+    grid-column: 2/3;
+    grid-row: 1/3;
   }
 }
 
-#om-os .hvem-er-vi-container .hvem-er-vi .volunteer div {
-  text-align: justify;
-}
+/* VORES AKTIVITETER */
 
 #om-os .vores-aktiviteter .vores-aktiviteter-h2 {
   @include breakpoint(desktop) {
@@ -175,6 +188,12 @@ body {
   left: 20%;
   text-align: right;
   margin-right: 4px;
+  @include breakpoint(desktop) {
+    font-size: 34px;
+    top: 12%;
+    left: 25%;
+    right: 3%;
+  }
 }
 
 #om-os .galleri .img-container h3 span {

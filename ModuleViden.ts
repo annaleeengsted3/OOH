@@ -20,21 +20,6 @@ export default class ModuleViden {
 
   private _dataLoader: DataLoader;
   private _data: any;
-  private _image1: HTMLImageElement = document.querySelector(
-    "#viden .images .img1"
-  );
-  private _image2: HTMLImageElement = document.querySelector(
-    "#viden .images .img2"
-  );
-  private _image3: HTMLImageElement = document.querySelector(
-    "#viden .images .img3"
-  );
-  private _image4: HTMLImageElement = document.querySelector(
-    "#viden .images .img4"
-  );
-  private _event_link: HTMLAnchorElement = document.querySelector(
-    "#event a.fb-button"
-  );
 
   constructor() {
     this._dataURLs = new DataURLs().getURLS;
@@ -64,6 +49,7 @@ export default class ModuleViden {
     this._data.forEach((image) => {
       let clone = <HTMLElement>temp.content.cloneNode(true);
       clone.querySelector("h3").innerHTML = image.title.rendered;
+      clone.querySelector("a").href = image.link_reference;
       clone.querySelector("img").src = image.billede.guid;
       clone.querySelector("img").alt = image.billede.post_title;
       dest.appendChild(clone);

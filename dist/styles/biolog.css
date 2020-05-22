@@ -46,8 +46,8 @@ article,
 h3,
 .content,
 section .email {
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 150px;
+    margin-right: 150px;
   }
 }
 @media all and (min-width: 1025px) {
@@ -56,8 +56,8 @@ article,
 h3,
 .content,
 section .email {
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 150px;
+    margin-right: 150px;
   }
 }
 
@@ -86,12 +86,19 @@ body {
   }
 }
 
+p {
+  max-width: 600px;
+}
+
 a {
   text-decoration: none;
+  color: #277684;
+  font-weight: 700;
 }
 
 a:hover {
-  color: #277684;
+  text-decoration: underline;
+  text-decoration-color: #fab080;
 }
 
 a:active {
@@ -112,7 +119,8 @@ a:active {
 }
 @media all and (min-width: 1025px) {
   .font-p, div.content {
-    font-size: 19px;
+    font-size: 20px;
+    line-height: 25px;
   }
 }
 
@@ -127,7 +135,7 @@ a:active {
 @media all and (min-width: 1025px) {
   .font-h1, h1 {
     padding-bottom: 15px;
-    font-size: 43px;
+    font-size: 40px;
     text-align: right;
   }
 }
@@ -144,7 +152,7 @@ a:active {
   .font-h2 {
     padding-top: 100px;
     padding-bottom: 15px;
-    font-size: 43px;
+    font-size: 37px;
     font-weight: 700;
     text-align: right;
   }
@@ -160,7 +168,7 @@ a:active {
 @media all and (min-width: 1025px) {
   .font-h3, .subtitle, .font-db-sub {
     text-align: right;
-    font-size: 34px;
+    font-size: 28px;
   }
 }
 
@@ -175,13 +183,13 @@ a:active {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
   font-size: 16px;
-  color: #277684;
 }
 
 .font-desk-nav {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
-  font-size: 23px;
+  letter-spacing: 2px;
+  font-size: 19px;
   color: #004b69;
   margin-left: 80px;
 }
@@ -232,11 +240,6 @@ a:active {
 @media all and (min-width: 750px) {
   .font-links {
     font-size: 25px;
-  }
-}
-@media all and (min-width: 1025px) {
-  .font-links {
-    font-size: 30px;
   }
 }
 
@@ -404,7 +407,7 @@ a:active {
 }
 @media all and (min-width: 1025px) {
   .font-button, .font-button-fb {
-    font-size: 23px;
+    font-size: 21px;
   }
 }
 
@@ -417,14 +420,6 @@ a:active {
   }
 }
 
-@media all and (min-width: 1025px) {
-  body {
-    background-image: url("../assets/headerbg4.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
-}
-
 section {
   padding-top: 165px;
   padding-bottom: 95px;
@@ -432,13 +427,13 @@ section {
 }
 @media all and (min-width: 1025px) {
   section {
-    padding-top: 320px;
+    padding-top: 250px;
     padding-bottom: 220px;
     display: grid;
     grid-template-columns: 3fr 5fr;
     column-gap: 100px;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 150px;
+    margin-right: 150px;
   }
 }
 
@@ -491,7 +486,7 @@ div.content {
 }
 @media all and (min-width: 750px) {
   div.content {
-    margin-bottom: 65px;
+    margin-bottom: 55px;
     grid-column: 2/3;
     grid-row: 2/3;
   }
@@ -527,7 +522,7 @@ img.img1 {
 }
 @media all and (min-width: 750px) {
   img.img1 {
-    margin-bottom: 65px;
+    margin-bottom: 55px;
     display: block;
     grid-column: 2/3;
     grid-row: 1/2;
@@ -547,7 +542,7 @@ section .email {
 }
 @media all and (min-width: 750px) {
   section .email {
-    margin-bottom: 65px;
+    margin-bottom: 55px;
     grid-column: 2/3;
     grid-row: 3/4;
   }
@@ -559,7 +554,7 @@ section .footer-some {
 }
 @media all and (min-width: 750px) {
   section .footer-some {
-    margin-bottom: 65px;
+    margin-bottom: 55px;
     grid-column: 2/3;
     grid-row: 4/5;
   }

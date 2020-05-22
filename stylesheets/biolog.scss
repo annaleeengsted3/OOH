@@ -2,15 +2,6 @@
 @import "global.scss";
 @import "layout.scss";
 @import "fonts.scss";
-$gridgap: 100px;
-
-body {
-  @include breakpoint(desktop) {
-    background-image: url("../assets/headerbg4.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
-}
 
 section {
   padding-top: $mobilepaddingtop;

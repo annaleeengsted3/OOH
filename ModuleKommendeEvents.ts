@@ -40,7 +40,21 @@ export default class ModuleKommendeEvents {
     this._dataLoader = new DataLoader(this._url);
     await this._dataLoader.loadData();
     this._events = this._dataLoader.getData;
+    console.log(this._events);
+    this.sortData();
     this.getImgfromJSON();
+  }
+
+  private sortData() {
+    // sorter races efter deres løbstidspunkt, med ældste først
+    this._events.sort((a, b) => {
+      if (b.dato_kode < a.dato_kode) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
+    console.log(this._events);
   }
 
   private async getImgfromJSON() {
@@ -63,33 +77,19 @@ export default class ModuleKommendeEvents {
       "#kommende-events .events-container"
     );
     dest.innerHTML = "";
+    let temp: HTMLTemplateElement = document.querySelector("template");
 
     this._events.forEach((event) => {
-      let template = `
+      let clone = <HTMLElement>temp.content.cloneNode(true);
+      clone.querySelector(".left h3").innerHTML = event.dato;
+      clone.querySelector(".left .month").innerHTML = event.dato_maaned;
+      clone.querySelector(".left .time").innerHTML = event.dato_tidsinterval;
 
-                                           <article class = "event load">
-                                           <div class="left">
-                                            <h3>${event.dato}</h3>
-                                            <div>
-                                             <p class="month">${event.dato_maaned}</p>
-                                             <p class="time">${event.dato_tidsinterval}</p>
-                                            </div>
-                                           </div>
+      clone.querySelector(".right h3").innerHTML = event.title.rendered;
+      clone.querySelector(".right .first-p").innerHTML = event.kort_tekst;
+      clone.querySelector(".right .bold").innerHTML = event.adresse_2;
 
-                                           <div class="right">
-                                           <h3>${event.title.rendered}</h3>
-                                           <p>${event.kort_tekst}</p>
-                                           <p class="bold">${event.adresse_2}</p>
-                                           <div>
-                                           <a href="event.html?id=${event.id}" class="read-more-button">Læs mere</a>
-                                           <a href="${event.fb_link}" class="fb-button" target="_blank">Meld dig til 
-       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9.089" viewBox="0 0 8 9.089"><g transform="translate(-0.394 0.455)"><rect width="8" height="9" transform="translate(0.394 -0.455)" fill="none"/><path d="M82.87,8.468V4.61h1.317L84.375,3.1H82.87V2.164c0-.423.141-.753.753-.753h.8V.047C84.234.047,83.764,0,83.246,0a1.816,1.816,0,0,0-1.929,1.976V3.1H80V4.61h1.317V8.468Z" transform="translate(-77.927 0.167)" fill="#f8f9fa" fill-rule="evenodd"/></g></svg>
-                                           </a>
-                                           </div>
-                                           </div>
-                                            </article">
-                   `;
-      dest.insertAdjacentHTML("beforeend", template);
+      dest.appendChild(clone);
     });
 
     this._ke_image.src = `${this._imgs[0].forside_billede.guid}`;

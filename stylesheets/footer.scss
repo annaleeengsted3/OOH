@@ -1,11 +1,24 @@
 footer {
-  @extend .site-padding;
-  background-color: $footerblue;
-  padding-top: $footerpaddingtopbottom;
-  padding-bottom: $footerpaddingtopbottom;
+  background-image: url("../assets/wave.svg");
+  background-size: cover;
+  padding-left: $mobilepaddingsides;
+  padding-right: $mobilepaddingsides;
+  // background-color: $footerblue;
+  padding-top: 130px;
+  padding-bottom: 100px;
+  @include breakpoint(tablet) {
+    padding-left: $tabletpaddingsides;
+    padding-right: $tabletpaddingsides;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
   @include breakpoint(desktop) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    padding-left: $desktoppaddingsides;
+    padding-right: $desktoppaddingsides;
+    padding-top: $footerpaddingtop;
+    padding-bottom: $footerpaddingbottom;
   }
 }
 

@@ -43,10 +43,10 @@
               <a href="om-os.html#vores-mission" class="sublink"
                 >Vores Mission</a
               >
-              <a href="om-os.html#hvem-er-vi" class="sublink">Hvem er vi?</a>
               <a href="om-os.html#vores-arrangementer" class="sublink"
                 >Vores arrangementer</a
               >
+              <a href="om-os.html#hvem-er-vi" class="sublink">Hvem er vi?</a>
               <a href="om-os.html#billeder" class="sublink">Billeder</a>
               <a href="kommende-events.html">Kommende Events</a>
               <a href="viden.html">Viden</a>
@@ -64,13 +64,13 @@
               <div class="nav-footer">
                 <div id="so-me-icons">
                   <a
-                    href="https://www.facebook.com/LisbetFriisDesign/"
+                    href="https://www.facebook.com/OsOmHavet/"
                     target="_blank"
                   >
                     <div class="fb-icon"></div>
                   </a>
                   <a
-                    href="https://www.instagram.com/lisbetfriis/"
+                    href="https://www.instagram.com/osomhavet/?hl=en"
                     target="_blank"
                   >
                     <div class="insta-icon"></div>
@@ -93,8 +93,8 @@
             </a>
             <div class="dropdown-content">
               <a href="om-os.html#vores-mission">Vores mission</a>
-              <a href="om-os.html#hvem-er-vi">Hvem er vi?</a>
               <a href="om-os.html#vores-aktiviteter">Vores arrangementer</a>
+              <a href="om-os.html#hvem-er-vi">Hvem er vi?</a>
               <a href="om-os.html#galleri">Billeder</a>
             </div>
           </div>
@@ -115,7 +115,7 @@
         </div>
       </nav>
     </header>
-
+    <img id="header-img" src="./assets/headerbg7.png" alt="" />
     <section id="kommende-events">
       <h1>KOMMENDE EVENTS</h1>
 
@@ -123,15 +123,49 @@
       <div class="subtitles">
         <h3 class="subtitle-1 load">
           Vil du se alle vores typer af events? Se
-          <span class="bold-link">vores vores aktiviteter!</span>
+          <a href="om-os.html#vores-aktiviteter" class="bold-link"
+            >vores arrangementer!</a
+          >
         </h3>
         <h3 class="subtitle-2 load">
           Eller leder du efter billeder fra tidligere arrangementer? Tjek
-          <span class="bold-link">vores galler!</span>
+          <a href="om-os.html#galleri" class="bold-link">vores galleri!</a>
         </h3>
       </div>
       <img src="" alt="" class="load" />
     </section>
+
+    <template>
+
+<article class="event load">
+  <div class="left">
+    <h3></h3>
+    <div>
+      <p class="month"></p>
+      <p class="time"></p>
+    </div>
+  </div>
+
+  <div class="right">
+    <h3></h3>
+    <p class="first-p"></p>
+    <p class="bold"></p>
+    <div>
+      <a href="event.html?id=${event.id}" class="read-more-button">Læs mere</a>
+      <a href="${event.fb_link}" class="fb-button" target="_blank">Meld dig til
+        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9.089" viewBox="0 0 8 9.089">
+          <g transform="translate(-0.394 0.455)">
+            <rect width="8" height="9" transform="translate(0.394 -0.455)" fill="none" />
+            <path d="M82.87,8.468V4.61h1.317L84.375,3.1H82.87V2.164c0-.423.141-.753.753-.753h.8V.047C84.234.047,83.764,0,83.246,0a1.816,1.816,0,0,0-1.929,1.976V3.1H80V4.61h1.317V8.468Z" transform="translate(-77.927 0.167)" fill="#f8f9fa" fill-rule="evenodd" />
+          </g>
+        </svg>
+      </a>
+    </div>
+  </div>
+  </article">
+
+
+    </template>
 
     <footer>
       <article class="contact-info">
@@ -155,10 +189,10 @@
       </article>
       <article class="footer-some">
         <p>Følg os på:</p>
-        <a href="https://www.facebook.com/LisbetFriisDesign/" target="_blank">
+        <a href="https://www.facebook.com/OsOmHavet/" target="_blank">
           <div class="fb-icon"></div>
         </a>
-        <a href="https://www.instagram.com/lisbetfriis/" target="_blank">
+        <a href="https://www.instagram.com/osomhavet/?hl=en" target="_blank">
           <div class="insta-icon"></div>
         </a>
       </article>

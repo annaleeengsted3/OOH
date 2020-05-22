@@ -38,6 +38,8 @@ export default class ModuleIndex {
     "picture .mobport-src"
   );
 
+  private hero: HTMLImageElement = document.querySelector("img.imgA");
+
   private _moduleEffect: ModuleWaveEffect;
   private _URLimageToDisplace: string = "../assets/indexbg.jpg";
   private _URLDmap: string = "../assets/water.png";
@@ -50,9 +52,15 @@ export default class ModuleIndex {
     this._url = this._dataURLs.index;
     this._viewport = window.innerWidth;
     this.getDatafromJSON();
-    if (this._viewport > 1025) {
-      this.setupPixi();
-    }
+    // if (this._viewport > 1025) {
+    //   this.setupPixi();
+    // }
+    document
+      .querySelector("header")
+      .addEventListener("mouseover", this.addFade);
+    document
+      .querySelector("header")
+      .addEventListener("mouseout", this.removeFade);
   }
 
   private async getDatafromJSON() {
@@ -82,6 +90,13 @@ export default class ModuleIndex {
     );
     this._moduleEffect.awake();
   }
+
+  private addFade = () => {
+    this.hero.classList.add("hide");
+  };
+  private removeFade = () => {
+    this.hero.classList.remove("hide");
+  };
 }
 
 let index: ModuleIndex = new ModuleIndex();

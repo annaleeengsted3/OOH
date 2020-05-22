@@ -31,3 +31,33 @@
   height: 223px;
   background-image: url("../assets/newlogo_white.svg");
 }
+
+picture {
+  @include breakpoint(desktop) {
+    display: none;
+  }
+}
+.imgA {
+  @include breakpoint(desktop) {
+    opacity: 1;
+    transition: opacity 2s ease;
+  }
+}
+.img-wrapper {
+  display: none;
+  @include breakpoint(desktop) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+.imgA,
+.imgB {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  box-shadow: none;
+}
+
+.fade {
+  opacity: 0;
+}

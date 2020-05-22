@@ -14,18 +14,38 @@ body {
   scroll-behavior: smooth;
 }
 
+button {
+  background-color: transparent;
+  outline: 0;
+  border: none;
+}
+
+button:active {
+  outline: 0;
+}
+
+button:focus {
+  outline: 0;
+}
+
 * {
   box-sizing: border-box;
 }
 
-.site-padding, header #mobile .overlay .overlay-content, header, footer {
-  padding-left: 24px;
-  padding-right: 24px;
+.site-padding, header #mobile .overlay .overlay-content {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+@media all and (min-width: 750px) {
+  .site-padding, header #mobile .overlay .overlay-content {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
 }
 @media all and (min-width: 1025px) {
-  .site-padding, header #mobile .overlay .overlay-content, header, footer {
-    padding-left: 260px;
-    padding-right: 260px;
+  .site-padding, header #mobile .overlay .overlay-content {
+    margin-left: 150px;
+    margin-right: 150px;
   }
 }
 
@@ -33,36 +53,64 @@ body {
   background-color: #fafaf8;
 }
 
+.box-shadow, img {
+  -webkit-box-shadow: 3px 10px 18px -9px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: 3px 10px 18px -9px rgba(0, 0, 0, 0.54);
+  box-shadow: 3px 10px 18px -9px rgba(0, 0, 0, 0.54);
+}
+
+.button {
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 25px;
+  min-height: 32px;
+}
+@media all and (min-width: 1025px) {
+  .button {
+    padding: 8px 20px;
+    transition: transform 0.9s ease;
+  }
+}
+
+p {
+  max-width: 600px;
+}
+
 a {
   text-decoration: none;
+  color: #277684;
+  font-weight: 700;
 }
 
 a:hover {
-  color: #277684;
+  text-decoration: underline;
+  text-decoration-color: #fab080;
 }
 
 a:active {
   color: #fab080;
 }
 
-.super-font, .font-db-lasttitle, .font-db-total, .font-db-latest, .font-db-kg1, .font-blog-link, .font-blog-date, .font-blog-title, .font-links, .font-footer-sub, footer .footer-some, footer .email,
-footer .phone-number, .font-footer-some, .font-footer-main, footer .footer-links a, footer .contact-info, .font-desk-subnav, .font-desk-nav, header nav .desktop a.desk_main,
-header nav .desktop .dropdown a.desk_main, .font-mobile-subnav, header nav .desktop .dropdown .dropdown-content a, header #mobile .overlay .overlay-content a.sublink, .font-mobile-nav, header #mobile .overlay .overlay-content a, .font-h3, .font-db-sub, .font-h2, .font-h1, .font-p {
+.super-font, .font-button, .font-button-fb, .font-events-p, .font-events-month, .font-events-location, .font-events-time, .font-events-day, .font-db-lasttitle, .font-db-total, .font-db-latest, .font-db-kg2, .font-db-kg1, .font-blog-link, .font-blog-category, .font-blog-date, .font-blog-title, .font-links, .font-footer-sub, footer .footer-some, footer .email,
+footer .phone-number, .font-footer-some, .font-footer-main, footer .footer-links a, footer .contact-info, .font-desk-subnav, header nav .desktop .dropdown .dropdown-content a, .font-desk-nav, header nav .desktop a.desk_main,
+header nav .desktop .dropdown a.desk_main, .font-mobile-subnav, header #mobile .overlay .overlay-content a.sublink, .font-mobile-nav, header #mobile .overlay .overlay-content a, .font-h3, .font-db-sub, .font-h2, .font-h1, .font-p {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #004b69;
-  margin: 0;
 }
 
 .font-p {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-size: 15px;
+  font-size: 16px;
   color: #004b69;
 }
 @media all and (min-width: 1025px) {
   .font-p {
-    font-size: 19px;
+    font-size: 20px;
+    line-height: 25px;
   }
 }
 
@@ -76,9 +124,8 @@ header nav .desktop .dropdown a.desk_main, .font-mobile-subnav, header nav .desk
 }
 @media all and (min-width: 1025px) {
   .font-h1 {
-    padding-top: 100px;
     padding-bottom: 15px;
-    font-size: 43px;
+    font-size: 40px;
     text-align: right;
   }
 }
@@ -95,7 +142,7 @@ header nav .desktop .dropdown a.desk_main, .font-mobile-subnav, header nav .desk
   .font-h2 {
     padding-top: 100px;
     padding-bottom: 15px;
-    font-size: 43px;
+    font-size: 37px;
     font-weight: 700;
     text-align: right;
   }
@@ -111,7 +158,7 @@ header nav .desktop .dropdown a.desk_main, .font-mobile-subnav, header nav .desk
 @media all and (min-width: 1025px) {
   .font-h3, .font-db-sub {
     text-align: right;
-    font-size: 39px;
+    font-size: 28px;
   }
 }
 
@@ -126,19 +173,19 @@ header nav .desktop .dropdown a.desk_main, .font-mobile-subnav, header nav .desk
   font-family: "Raleway", sans-serif;
   font-weight: 300;
   font-size: 16px;
-  color: #277684;
 }
 
 .font-desk-nav, header nav .desktop a.desk_main,
 header nav .desktop .dropdown a.desk_main {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
-  font-size: 23px;
+  letter-spacing: 2px;
+  font-size: 19px;
   color: #004b69;
   margin-left: 80px;
 }
 
-.font-desk-subnav {
+.font-desk-subnav, header nav .desktop .dropdown .dropdown-content a {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
   font-size: 17px;
@@ -179,25 +226,30 @@ footer .phone-number, .font-footer-some {
 .font-links {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 28px;
   text-decoration: underline;
   color: #004b69;
 }
+@media all and (min-width: 750px) {
+  .font-links {
+    font-size: 25px;
+  }
+}
 @media all and (min-width: 1025px) {
   .font-links {
-    font-size: 36px;
+    font-size: 30px;
   }
 }
 
 .font-blog-title {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
-  font-size: 22px;
+  font-size: 23px;
   color: #829fb1;
 }
 @media all and (min-width: 1025px) {
   .font-blog-title {
-    font-size: 26px;
+    font-size: 32px;
   }
 }
 
@@ -208,22 +260,22 @@ footer .phone-number, .font-footer-some {
   color: #004b69;
 }
 
-.font-blog-link {
+.font-blog-category {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 13px;
   color: #004b69;
 }
 @media all and (min-width: 1025px) {
-  .font-blog-link {
+  .font-blog-category {
     font-size: 14px;
   }
 }
 
 .font-blog-link {
-  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 19px;
   color: #277684;
   text-decoration: underline;
 }
@@ -233,19 +285,20 @@ footer .phone-number, .font-footer-some {
   }
 }
 
-.font-db-total, .font-db-latest, .font-db-kg1 {
+.font-db-total, .font-db-latest, .font-db-kg2, .font-db-kg1 {
   font-family: "Raleway", sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 55px;
   color: #004b69;
 }
 @media all and (min-width: 1025px) {
-  .font-db-total, .font-db-latest, .font-db-kg1 {
+  .font-db-total, .font-db-latest, .font-db-kg2, .font-db-kg1 {
     font-size: 99px;
   }
 }
 
 .font-db-kg1 {
+  font-weight: 300;
   font-size: 29px;
 }
 @media all and (min-width: 1025px) {
@@ -254,20 +307,20 @@ footer .phone-number, .font-footer-some {
   }
 }
 
-.font-db-latest, .font-db-kg1 {
+.font-db-latest, .font-db-kg2 {
   color: #829fb1;
 }
 @media all and (min-width: 1025px) {
-  .font-db-latest, .font-db-kg1 {
+  .font-db-latest, .font-db-kg2 {
     font-size: 89px;
   }
 }
 
-.font-db-kg1 {
+.font-db-kg2 {
   font-size: 29px;
 }
 @media all and (min-width: 1025px) {
-  .font-db-kg1 {
+  .font-db-kg2 {
     font-size: 47px;
   }
 }
@@ -290,15 +343,105 @@ footer .phone-number, .font-footer-some {
   }
 }
 
+.font-events-day {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 55px;
+}
+@media all and (min-width: 1025px) {
+  .font-events-day {
+    font-size: 56px;
+  }
+}
+
+.font-events-month, .font-events-location, .font-events-time {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+}
+@media all and (min-width: 1025px) {
+  .font-events-month, .font-events-location, .font-events-time {
+    font-size: 27px;
+    font-weight: 500;
+  }
+}
+
+.font-events-time {
+  font-size: 15px;
+}
+@media all and (min-width: 1025px) {
+  .font-events-time {
+    font-size: 24px;
+    font-weight: 300;
+  }
+}
+
+.font-events-location {
+  font-weight: 500;
+}
+@media all and (min-width: 1025px) {
+  .font-events-location {
+    font-size: 30px;
+  }
+}
+
+.font-events-p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+}
+@media all and (min-width: 1025px) {
+  .font-events-p {
+    font-size: 19px;
+  }
+}
+
+.font-button, .font-button-fb {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  color: #fafaf8;
+}
+@media all and (min-width: 1025px) {
+  .font-button, .font-button-fb {
+    font-size: 23px;
+  }
+}
+
+.font-button-fb {
+  font-size: 9px;
+}
+@media all and (min-width: 1025px) {
+  .font-button-fb {
+    font-size: 15px;
+  }
+}
+
 footer {
-  background-color: #a6b1b7;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  background-image: url("../assets/wave.svg");
+  background-size: cover;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 130px;
+  padding-bottom: 100px;
+}
+@media all and (min-width: 750px) {
+  footer {
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
 @media all and (min-width: 1025px) {
   footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 230px;
+    padding-bottom: 180px;
   }
 }
 
@@ -367,19 +510,30 @@ footer .footer-links a:hover {
 
 header {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   z-index: 3;
   padding-top: 27px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 @media all and (min-width: 1025px) {
   header {
-    padding-top: 85px;
+    z-index: 6;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    transition: transform 1.5s ease;
   }
 }
 
+#mobile {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 @media all and (min-width: 1025px) {
   #mobile {
     display: none;
@@ -438,7 +592,7 @@ header #mobile .openbtn {
   position: absolute;
   font-size: 55px;
   right: 0;
-  margin-right: 24px;
+  padding-right: 24px;
   margin-top: 8px;
   cursor: pointer;
   top: 0;
@@ -479,9 +633,36 @@ header #mobile .openbtn {
   .logo_con {
     background-image: url("../assets/logo_oohblue.svg");
     margin: 0 0;
-    width: 85px;
-    height: 84px;
+    width: 75px;
+    height: 74px;
   }
+}
+
+#header-img {
+  display: none;
+}
+@media all and (min-width: 1025px) {
+  #header-img {
+    opacity: 0.6;
+    display: block;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -4;
+    width: 100vw;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    box-shadow: none;
+    transition: opacity 1s ease;
+  }
+}
+
+.fade {
+  opacity: 0.2 !important;
+}
+
+.move {
+  transform: translateY(10px);
 }
 
 .lNav {
@@ -500,14 +681,13 @@ header #mobile .openbtn {
 
 header nav .desktop a.desk_main,
 header nav .desktop .dropdown a.desk_main {
-  margin-left: 80px;
   white-space: nowrap;
 }
 
 header nav .desktop .dropdown .dropdown-content a {
   float: none;
   text-align: right;
-  margin-top: 22px;
+  margin-top: 12px;
 }
 
 .dropdown {
@@ -520,8 +700,11 @@ header nav .desktop .dropdown .dropdown-content a {
   opacity: 1;
 }
 
-.dropdown:hover #om-os {
-  opacity: 0.1;
+@media all and (min-width: 1025px) {
+  .desktop a.desk_main:hover {
+    text-decoration: underline;
+    text-decoration-color: #fab080 !important;
+  }
 }
 
 .dropdown-content {
@@ -533,12 +716,23 @@ header nav .desktop .dropdown .dropdown-content a {
   z-index: 1;
 }
 
+.dropdown-content a {
+  transition: transform 1s ease;
+}
+
+.dropdown-content a:hover {
+  transform: scale(1.03);
+  color: #277684;
+}
+
 nav {
-  justify-self: end;
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: flex-end;
+}
+
+.hide {
+  opacity: 0;
 }
 
 /*# sourceMappingURL=header.css.map */

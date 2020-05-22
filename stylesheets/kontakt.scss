@@ -2,15 +2,6 @@
 @import "global.scss";
 @import "layout.scss";
 @import "fonts.scss";
-$gridgap: 100px;
-
-body {
-  @include breakpoint(desktop) {
-    background-image: url("../assets/headerbg4.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
-}
 
 section {
   padding-top: $mobilepaddingtop;
@@ -21,7 +12,6 @@ section {
     padding-top: $desktoptoptocontent;
     padding-bottom: $spacingcontenttofooterdesktop;
     display: grid;
-    // grid-template-columns: repeat(2, 1fr);
     grid-template-columns: 3fr 5fr;
     column-gap: $gridgap;
     margin-left: $desktoppaddingsides;

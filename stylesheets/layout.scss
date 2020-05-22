@@ -4,20 +4,23 @@ $breakpoints: (
   tablet: 750px,
 );
 
-$mobilepaddingsides: 24px;
 $mobilepaddingtop: 165px;
 $mobilcontenttofooter: 95px;
 $mobilefooterpadding: 75px;
 
+$mobilepaddingsides: 24px;
 $tabletpaddingsides: 110px;
+$desktoppaddingsides: 150px;
 
 $desktoppaddingtop: 85px;
-$desktoppaddingsides: 200px;
-$desktoptoptocontent: 320px;
+$desktoptoptocontent: 250px;
 
-$footerpaddingtopbottom: 60px;
+$footerpaddingtop: 230px;
+$footerpaddingbottom: 180px;
 
 $desktopmarginHeader: 200px;
+
+$gridgap: 100px;
 
 @mixin breakpoint($key) {
   @if map-get($breakpoints, $key) {

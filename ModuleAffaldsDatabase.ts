@@ -72,7 +72,7 @@ export default class ModuleAffaldsDatabase {
       duration: 2000,
       delay: 50,
     });
-    this._imgA.style.animation = "fade 6000ms both";
+    // this._imgA.style.animation = "fade 6000ms both";
   }
 }
 

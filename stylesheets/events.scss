@@ -2,15 +2,6 @@
 @import "global.scss";
 @import "layout.scss";
 @import "fonts.scss";
-$gridgap: 150px;
-
-body {
-  @include breakpoint(desktop) {
-    background-image: url("../assets/headerbg4.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
-}
 
 #kommende-events {
   padding-top: $mobilepaddingtop;
@@ -20,7 +11,7 @@ body {
     padding-top: $desktoptoptocontent;
     padding-bottom: $spacingcontenttofooterdesktop;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 3fr 5fr;
     column-gap: $gridgap;
     margin-left: $desktoppaddingsides;
     margin-right: $desktoppaddingsides;
@@ -30,7 +21,7 @@ body {
 #kommende-events img {
   margin-bottom: $spacingelements;
   @include breakpoint(desktop) {
-    margin-bottom: $spacingelements;
+    margin-bottom: $spacingelementsdesktop;
     grid-row: 1/2;
     grid-column: 2/3;
   }
@@ -95,6 +86,7 @@ body {
   grid-gap: 5px;
 }
 #kommende-events .events-container article.event .left {
+  @extend .box-shadow;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -127,6 +119,7 @@ body {
 }
 
 #kommende-events .events-container article.event .right {
+  @extend .box-shadow;
   border-radius: 0px 18px 18px 0px;
   background-color: $eventbg;
   padding: 10px 10px;
@@ -164,6 +157,8 @@ body {
 
 #kommende-events .events-container article.event .right a {
   @extend .font-button;
+  @extend .box-shadow;
+  text-decoration: none;
   min-width: 100px;
   height: 32px;
   border-radius: 18px;
