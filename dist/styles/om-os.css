@@ -35,7 +35,7 @@ button:focus {
 .site-padding, h1,
 h2,
 h3,
-p {
+section p {
   margin-left: 24px;
   margin-right: 24px;
 }
@@ -43,7 +43,7 @@ p {
   .site-padding, h1,
 h2,
 h3,
-p {
+section p {
     margin-left: 10vw;
     margin-right: 10vw;
   }
@@ -52,7 +52,7 @@ p {
   .site-padding, h1,
 h2,
 h3,
-p {
+section p {
     margin-left: 10vw;
     margin-right: 10vw;
   }
@@ -431,7 +431,7 @@ a:active {
   h1,
 h2,
 h3,
-p {
+section p {
     margin-left: 0px;
     margin-right: 0px;
   }

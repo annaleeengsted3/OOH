@@ -16,7 +16,7 @@
 h1,
 h2,
 h3,
-p {
+section p {
   @extend .site-padding;
   @include breakpoint(desktop) {
     margin-left: 0px;
