@@ -38,14 +38,14 @@ button:focus {
 }
 @media all and (min-width: 750px) {
   .site-padding {
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 10vw;
+    margin-right: 10vw;
   }
 }
 @media all and (min-width: 1025px) {
   .site-padding {
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 10vw;
+    margin-right: 10vw;
   }
 }
 
@@ -86,7 +86,7 @@ a {
 
 a:hover {
   text-decoration: underline;
-  text-decoration-color: #fab080;
+  text-decoration-color: #d2dbd7 !important;
 }
 
 a:active {
@@ -115,7 +115,7 @@ a:active {
 .font-h1 {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 33px;
+  font-size: 31px;
   color: #829fb1;
   border-bottom: 2px solid #fddbc5;
   margin-bottom: 50px;
@@ -130,8 +130,8 @@ a:active {
 
 .font-h2 {
   font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: 29px;
+  font-weight: 700;
+  font-size: 25px;
   color: #829fb1;
   margin-bottom: 50px;
   border-bottom: 2px solid #fddbc5;
@@ -148,8 +148,8 @@ a:active {
 
 .font-h3, .font-db-sub {
   font-family: "Raleway", sans-serif;
-  font-weight: 300;
-  font-size: 23px;
+  font-weight: 500;
+  font-size: 21px;
   color: #829fb1;
   margin-bottom: 25px;
 }
@@ -204,7 +204,7 @@ a:active {
 .font-footer-sub, .font-footer-some {
   font-family: "Quicksand", sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 19px;
 }
 @media all and (min-width: 1025px) {
   .font-footer-sub, .font-footer-some {
@@ -220,12 +220,12 @@ a:active {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
   font-size: 28px;
-  text-decoration: underline;
   color: #004b69;
 }
 @media all and (min-width: 750px) {
   .font-links {
     font-size: 25px;
+    font-weight: 500;
   }
 }
 
@@ -281,7 +281,7 @@ a:active {
 }
 @media all and (min-width: 1025px) {
   .font-db-total, .font-db-latest, .font-db-kg2, .font-db-kg1 {
-    font-size: 99px;
+    font-size: 85px;
   }
 }
 
@@ -334,7 +334,7 @@ a:active {
 .font-events-day {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: 55px;
+  font-size: 45px;
 }
 @media all and (min-width: 1025px) {
   .font-events-day {
@@ -443,8 +443,8 @@ a:active {
 }
 @media all and (min-width: 1025px) {
   #index .index-info {
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 10vw;
+    padding-right: 10vw;
     align-self: center;
   }
 }
