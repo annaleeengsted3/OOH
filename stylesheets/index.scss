@@ -14,22 +14,71 @@
   }
 }
 
-#index .index-logo-container {
+#index .index-overlay {
   position: absolute;
   left: 0;
   top: 0;
   width: 100vw;
   height: 100vh;
   z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  // grid-template-rows: 1fr;
+  grid-template-rows: 2fr 5fr 1fr;
+  @include breakpoint(tablet) {
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 2fr 4fr 1fr;
+  }
 }
 
-#index .index-logo {
-  width: 211px;
-  height: 223px;
-  background-image: url("../assets/newlogo_white.svg");
+#index .index-info {
+  grid-row: 2/3;
+  // align-self: center;
+  // display: grid;
+  padding-left: $mobilepaddingsides;
+  padding-right: $mobilepaddingsides;
+  @include breakpoint(desktop) {
+    padding-left: $desktoppaddingsides;
+    padding-right: $desktoppaddingsides;
+    align-self: center;
+  }
+}
+
+#index .index-info h1.index-txt {
+  font-weight: 900;
+  font-family: $raleway;
+  font-size: 40px;
+  color: $oohblue;
+
+  @include breakpoint(desktop) {
+    // color: $oohblue;
+    // font-size: 40px;
+  }
+}
+.next {
+  margin-top: 25px;
+  background-color: #829fb1e1;
+  padding: 10px;
+  display: inline-block;
+}
+
+#index .index-info h2 {
+  // @extend .font-p;
+  font-family: $raleway;
+  font-size: 18px;
+  color: $white;
+  font-weight: $ro7;
+
+  @include breakpoint(desktop) {
+    // color: $emerald;
+  }
+}
+
+#index .index-info .location {
+  font-family: $raleway;
+  font-weight: $ra7;
+  font-size: 27px;
+  color: $lightpeach;
 }
 
 picture {

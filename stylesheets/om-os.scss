@@ -4,11 +4,23 @@
 @import "fonts.scss";
 
 #om-os {
-  @extend .site-padding;
   padding-top: $mobilepaddingtop;
   min-height: 100vh;
   @include breakpoint(desktop) {
     padding-top: $desktoptoptocontent;
+    margin-left: $desktoppaddingsides;
+    margin-right: $desktoppaddingsides;
+  }
+}
+
+h1,
+h2,
+h3,
+p {
+  @extend .site-padding;
+  @include breakpoint(desktop) {
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 
@@ -32,12 +44,16 @@ strong {
   @extend .font-h1;
   border-bottom: 2px solid $lightpeach;
   margin-bottom: $spacingtitletocontent;
+  @include breakpoint(desktop) {
+    align-self: start;
+    padding-top: $desktopmarginHeader;
+    margin-bottom: 0px;
+  }
 }
 
 #om-os article {
   @extend .font-p;
   margin-bottom: $spacingelements;
-  //   padding-right: 140px;
 }
 
 #om-os img {
@@ -51,12 +67,6 @@ strong {
   @extend .font-h2;
   margin-bottom: $spacingtitletocontent;
   border-bottom: 2px solid $lightpeach;
-}
-
-#om-os section.vores-mission h1 {
-  @include breakpoint(desktop) {
-    align-self: center;
-  }
 }
 
 #om-os section.vores-mission article.vores-mission {
@@ -73,7 +83,7 @@ strong {
   }
 }
 #om-os .hvem-er-vi-container .hvem-er-vi .volunteer {
-  @include breakpoint(desktop) {
+  @include breakpoint(tablet) {
     display: grid;
     grid-template-columns: 2fr 1fr;
     margin-bottom: 0px;
@@ -84,14 +94,11 @@ strong {
   margin-bottom: 15px;
   text-align: center;
   @include breakpoint(desktop) {
-    // padding-top: 33px;
     text-align: left;
-    // grid-column: 1/2;
-    // grid-row: 1/2;
   }
 }
 #om-os .hvem-er-vi-container .hvem-er-vi .volunteer .wrapper {
-  @include breakpoint(desktop) {
+  @include breakpoint(tablet) {
     grid-column: 1/2;
     grid-row: 1/2;
   }
@@ -101,12 +108,13 @@ strong {
   @extend .box-shadow;
   width: 50%;
   margin-top: 30px;
-  // padding-top: 44px;
-  // margin-top: 26px;
   float: right;
   padding: 5px;
   clip-path: circle();
   shape-outside: circle();
+  @include breakpoint(tablet) {
+    // width: ;
+  }
   @include breakpoint(desktop) {
     margin-top: 0px;
     width: 80%;
@@ -187,7 +195,6 @@ strong {
   top: 2%;
   left: 20%;
   text-align: right;
-  margin-right: 4px;
   @include breakpoint(desktop) {
     font-size: 34px;
     top: 12%;

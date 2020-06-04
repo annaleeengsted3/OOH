@@ -65,7 +65,9 @@
   margin-bottom: $spacingtitletocontent;
   white-space: nowrap;
   @include breakpoint(desktop) {
-    align-self: center;
+    align-self: start;
+    padding-top: $desktopmarginHeader;
+    margin-bottom: 0px;
     margin-left: 0px;
     margin-right: 0px;
   }

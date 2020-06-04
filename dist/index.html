@@ -20,7 +20,7 @@
       content="En frivillig miljøorganisation med havet i fokus. Vi arrangerer affaldsindsamlinger både på stranden og havets bund. Dyk med og bliv en del af fællesskabet nu!"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Raleway:wght@100;300;500;700&family=Roboto:wght@100;300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Raleway:wght@100;300;500;700;900&family=Roboto:wght@100;300&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/index.css" />
@@ -30,9 +30,22 @@
       body {
         background-color: #a6b1b7;
       }
-      .logo_con {
-        opacity: 0;
-      }
+
+   img{
+     box-shadow: none!important;
+   }
+    footer#footer-index{
+     padding-top: 100px;
+   }
+ @media screen and (max-width: 520px){
+
+   footer#footer-index{
+     padding-top: 130px;
+     padding-bottom: 130px;
+     
+   }
+ }
+  
     </style>
   </head>
 
@@ -66,14 +79,11 @@
               <a href="spoerg-en-biolog.html" class="sublink"
                 >Spørg en biolog</a
               >
-              <a href="nyttige-links.html" class="sublink">Nyttige links</a>
+              <!-- <a href="nyttige-links.html" class="sublink">Nyttige links</a>-->
               <a href="kontakt.html">Kontakt</a>
               <div class="nav-footer">
                 <div id="so-me-icons">
-                  <a
-                    href="https://www.facebook.com/OsOmHavet/"
-                    target="_blank"
-                  >
+                  <a href="https://www.facebook.com/OsOmHavet/" target="_blank">
                     <div class="fb-icon"></div>
                   </a>
                   <a
@@ -83,13 +93,11 @@
                     <div class="insta-icon"></div>
                   </a>
                 </div>
-                <a href="index.html">
-                  <div class="logo_con lNav"></div>
-                </a>
+             
               </div>
             </div>
           </div>
-          <button class="openbtn">&#9776;</button>
+          <button class="openbtn"></button>
         </div>
 
         <div class="desktop">
@@ -115,7 +123,7 @@
               <a href="vores-affalds-database.html">Vores affalds-database</a>
               <a href="viden-og-gode-raad.html">Viden og gode råd</a>
               <a href="spoerg-en-biolog.html">Spørg en biolog</a>
-              <a href="nyttige-links.html">Nyttige links</a>
+              <!-- <a href="nyttige-links.html">Nyttige links</a> -->
             </div>
           </div>
           <a href="kontakt.html" class="desk_main">Kontakt</a>
@@ -146,18 +154,31 @@
       </picture>
       <div class="img-wrapper">
         <img
-          src="assets/databaseB.jpg"
+          src="assets/disappear2.jpg"
           alt="Strand uden plastik"
           class="imgB"
         />
-        <img src="assets/databaseA.jpg" alt="Strand med plastik" class="imgA" />
+        <img
+          src="assets/disappear1.jpg"
+          alt="Strand med plastik"
+          class="imgA"
+        />
       </div>
-      <div class="index-logo-container">
-        <div class="index-logo"></div>
+      <div class="index-overlay">
+      
+
+          <article class="index-info">
+            <h1 class="index-txt"></h1>
+            <div class="next">
+              <h2>Næste Event:</h2>
+              <a href=""><h3 class="location"></h3></a>
+            </div>
+      
+        </div>
       </div>
     </section>
 
-    <footer>
+    <footer id="footer-index">
       <article class="contact-info">
         <p>Os Om Havet</p>
         <div class="phone-details">
@@ -178,13 +199,18 @@
         <a href="kontakt.html">Kontakt</a>
       </article>
       <article class="footer-some">
-        <p>Følg os på:</p>
+        <div>
+          <p>Bliv en del af fællesskabet!</p>
+          <p>Følg os på</p>
+        </div>
+
+            <div class="footer-icons">
         <a href="https://www.facebook.com/OsOmHavet/" target="_blank">
           <div class="fb-icon"></div>
         </a>
         <a href="https://www.instagram.com/osomhavet/?hl=en" target="_blank">
           <div class="insta-icon"></div>
-        </a>
+        </a></div>
       </article>
     </footer>
 

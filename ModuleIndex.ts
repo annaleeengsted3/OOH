@@ -1,10 +1,11 @@
 import "./stylesheets/global.scss";
 import DataLoader from "./DataLoader";
 import { DataURLs } from "./DataURLs";
-import ModuleWaveEffect from "./ModuleWaveEffect";
+// import ModuleWaveEffect from "./ModuleWaveEffect";
 
 export default class ModuleIndex {
   private _url: string;
+  private _urlNextEvent: string;
   private _dataURLs: {
     index: string;
     omos: string;
@@ -20,6 +21,10 @@ export default class ModuleIndex {
   };
   private _dataLoader: DataLoader;
   private _data: any;
+  private _events: any;
+  private _nextEventLink: HTMLAnchorElement = document.querySelector(
+    ".index-info a"
+  );
   private _viewport: number;
   private _desktop: HTMLElement = document.querySelector(
     "picture .desktop-src"
@@ -40,7 +45,7 @@ export default class ModuleIndex {
 
   private hero: HTMLImageElement = document.querySelector("img.imgA");
 
-  private _moduleEffect: ModuleWaveEffect;
+  // private _moduleEffect: ModuleWaveEffect;
   private _URLimageToDisplace: string = "../assets/indexbg.jpg";
   private _URLDmap: string = "../assets/water.png";
   private _DOMContainer: HTMLElement = document.querySelector(
@@ -50,6 +55,7 @@ export default class ModuleIndex {
   constructor() {
     this._dataURLs = new DataURLs().getURLS;
     this._url = this._dataURLs.index;
+    this._urlNextEvent = this._dataURLs.kommende_events;
     this._viewport = window.innerWidth;
     this.getDatafromJSON();
     // if (this._viewport > 1025) {
@@ -67,6 +73,20 @@ export default class ModuleIndex {
     this._dataLoader = new DataLoader(this._url);
     await this._dataLoader.loadData();
     this._data = this._dataLoader.getData;
+    this.getNextEventData();
+  }
+
+  private async getNextEventData() {
+    this._dataLoader = new DataLoader(this._urlNextEvent);
+    await this._dataLoader.loadData();
+    this._events = this._dataLoader.getData;
+    this._events.sort((a, b) => {
+      if (b.dato_kode < a.dato_kode) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
     this.showInitialData();
   }
 
@@ -79,17 +99,26 @@ export default class ModuleIndex {
     this._tabport.setAttribute("srcset", `${this._data[0].tablet_port.guid}`);
     this._mobport.setAttribute("src", `${this._data[0].mobile_port.guid}`);
     this._mobland.setAttribute("srcset", `${this._data[0].mobile_land.guid}`);
+
+    document.querySelector(
+      ".index-txt"
+    ).innerHTML = `${this._data[0].forside_text}`;
+
+    document.querySelector(
+      ".index-info .location"
+    ).innerHTML = `${this._events[0].dato}. ${this._events[0].dato_maaned}: ${this._events[0].title.rendered}`;
+    this._nextEventLink.href = `event.html?id=${this._events[0].id}`;
   }
 
-  private setupPixi() {
-    console.log("setting up pixi");
-    this._moduleEffect = new ModuleWaveEffect(
-      this._URLimageToDisplace,
-      this._URLDmap,
-      this._DOMContainer
-    );
-    this._moduleEffect.awake();
-  }
+  // private setupPixi() {
+  //   console.log("setting up pixi");
+  //   this._moduleEffect = new ModuleWaveEffect(
+  //     this._URLimageToDisplace,
+  //     this._URLDmap,
+  //     this._DOMContainer
+  //   );
+  //   this._moduleEffect.awake();
+  // }
 
   private addFade = () => {
     this.hero.classList.add("hide");

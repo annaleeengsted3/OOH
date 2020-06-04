@@ -22,23 +22,32 @@ header {
   padding-top: 27px;
   padding-left: $mobilepaddingsides;
   padding-right: $mobilepaddingsides;
+  display: flex;
+
   @include breakpoint(desktop) {
     z-index: 6;
+    width: 100vw;
     padding-left: $desktoppaddingsides;
     padding-right: $desktoppaddingsides;
-    padding-top: 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    padding-top: 20px;
+    display: flex;
     align-items: center;
+  }
+}
+
+nav {
+  // justify-self: start;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+
+  @include breakpoint(desktop) {
+    display: flex;
     transition: transform 1.5s ease;
   }
 }
 
 #mobile {
-  position: absolute;
-
-  top: 0;
-  right: 0;
   @include breakpoint(desktop) {
     display: none;
   }
@@ -60,10 +69,9 @@ header #mobile .overlay .overlay-content {
   @extend .site-padding;
   margin-top: 0;
   position: absolute;
-  top: 90px;
+  top: 100px;
   width: 100vw;
   text-align: left;
-  // margin-top: $mobilmargintop;
 }
 
 header #mobile .overlay .overlay-content a {
@@ -81,7 +89,7 @@ header #mobile .overlay .overlay-content a.sublink {
   margin-left: 10px;
 }
 header #mobile .overlay .overlay-content a.sublink:nth-child(5),
-header #mobile .overlay .overlay-content a.sublink:nth-child(11) {
+header #mobile .overlay .overlay-content a.sublink:nth-child(10) {
   padding-bottom: 20px;
 }
 
@@ -99,20 +107,19 @@ header #mobile .openbtn {
   // @extend .font-footer-main;
   color: $oohblue;
   position: absolute;
-  font-size: $navHeight + px;
+  width: 55px;
+  height: 55px;
   right: 0;
-  padding-right: $mobilepaddingsides;
-  // margin-right: $mobilepaddingsides;
-  // margin-top: calc((74 - #{$navHeight}) / 2) + px;
-  margin-top: $btnTopmarg + px;
+  margin-right: $mobilepaddingsides;
+  margin-top: 30px;
+  background-image: url("../assets/burger.svg");
+  background-size: cover;
   cursor: pointer;
   top: 0;
 }
 
 .nav-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
 }
 
 .fb-icon {
@@ -128,21 +135,23 @@ header #mobile .openbtn {
 }
 
 #so-me-icons {
+  margin-top: 15px;
   display: flex;
 }
 
 .logo_con {
   margin-left: 0px;
-  background-image: url("../assets/logo_svg_uden_navn.svg");
-  width: 55px;
-  height: 54px;
+  background-image: url("../assets/logo_oohblue.svg");
+  width: 85px;
+  height: 84px;
   opacity: 1;
   transition: opacity 2.3s;
   @include breakpoint(desktop) {
     background-image: url("../assets/logo_oohblue.svg");
     margin: 0 0;
-    width: 75px;
-    height: 74px;
+    // width: 85px;
+    // height: 84px;
+    margin-right: 50px;
   }
 }
 
@@ -168,22 +177,23 @@ header #mobile .openbtn {
 }
 
 .move {
-  transform: translateY(10px);
-}
-
-.lNav {
-  background-image: url("../assets/newlogo.svg");
+  transform: translateY(8px);
 }
 
 //DESKTOP
+
+nav {
+  @include breakpoint(desktop) {
+    display: flex;
+    // justify-content: flex-end;
+  }
+}
 
 .desktop {
   display: none;
   @include breakpoint(desktop) {
     display: flex;
     align-items: center;
-
-    // justify-self: start;
   }
 }
 
@@ -200,7 +210,8 @@ header nav .desktop .dropdown .dropdown-content a {
 
 header nav .desktop .dropdown .dropdown-content a {
   float: none;
-  text-align: right;
+  // text-align: right;
+  margin-left: 8px;
   margin-top: 12px;
   @extend .font-mobile-subnav;
 }
@@ -212,6 +223,9 @@ header nav .desktop .dropdown .dropdown-content a {
 .dropdown:hover .dropdown-content {
   visibility: visible;
   opacity: 1;
+}
+.desktop a.desk_main {
+  margin-right: 90px;
 }
 .desktop a.desk_main:hover {
   @include breakpoint(desktop) {
@@ -234,16 +248,7 @@ header nav .desktop .dropdown .dropdown-content a {
 }
 
 .dropdown-content a:hover {
-  transform: scale(1.03);
   color: $emerald;
-}
-
-nav {
-  // justify-self: start;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  // justify-content: flex-start;
 }
 
 .hide {

@@ -1,9 +1,10 @@
 $raleway: "Raleway", sans-serif;
-// $raleway: "Montserrat", sans-serif;
+
 $ra1: 100;
 $ra3: 300;
 $ra5: 500;
 $ra7: 700;
+$ra9: 900;
 $roboto: "Roboto", sans-serif;
 $ro1: 100;
 $ro3: 300;
@@ -35,7 +36,7 @@ a {
 }
 a:hover {
   text-decoration: underline;
-  text-decoration-color: $darkpeach;
+  text-decoration-color: $foam !important;
 }
 
 a:active {
@@ -45,7 +46,6 @@ a:active {
 .super-font {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  //   position: relative;
   color: $oohblue;
 }
 
@@ -65,16 +65,14 @@ a:active {
 
 .font-h1 {
   @extend .super-font;
-
   font-family: $raleway;
   font-weight: $ra7;
-  font-size: 33px;
+  font-size: 31px;
   color: $headline;
   border-bottom: 2px solid $lightpeach;
   margin-bottom: $spacingtitletocontent;
 
   @include breakpoint(desktop) {
-    // padding-top: $titletoppaddingdesktop;
     padding-bottom: $borderpadding;
     font-size: 40px;
     text-align: right;
@@ -85,8 +83,8 @@ a:active {
   @extend .super-font;
 
   font-family: $raleway;
-  font-weight: $ra5;
-  font-size: 29px;
+  font-weight: $ra7;
+  font-size: 25px;
   color: $headline;
   margin-bottom: $spacingtitletocontent;
   border-bottom: 2px solid $lightpeach;
@@ -104,8 +102,8 @@ a:active {
   @extend .super-font;
 
   font-family: $raleway;
-  font-weight: $ra3;
-  font-size: 23px;
+  font-weight: $ra5;
+  font-size: 21px;
   color: $headline;
   margin-bottom: $spacingesubtitles;
 
@@ -136,12 +134,9 @@ a:active {
 .font-desk-nav {
   @extend .super-font;
   font-family: $raleway;
-  // font-weight: $ra5;
   font-weight: $ra5;
-  letter-spacing: 2px;
   font-size: 19px;
   color: $oohblue;
-  margin-left: 80px;
 }
 
 .font-desk-subnav {
@@ -170,7 +165,7 @@ a:active {
   @extend .super-font;
   font-family: $quicksand;
   font-weight: $q7;
-  font-size: 16px;
+  font-size: 19px;
 
   @include breakpoint(desktop) {
     font-size: 19px;
@@ -187,10 +182,11 @@ a:active {
   font-family: $raleway;
   font-weight: $ra3;
   font-size: 28px;
-  text-decoration: underline;
+  // text-decoration: underline;
   color: $oohblue;
   @include breakpoint(tablet) {
     font-size: 25px;
+    font-weight: $ra5;
   }
 }
 
@@ -246,7 +242,7 @@ a:active {
   font-size: 55px;
   color: $oohblue;
   @include breakpoint(desktop) {
-    font-size: 99px;
+    font-size: 85px;
   }
 }
 
@@ -298,7 +294,7 @@ a:active {
   @extend .super-font;
   font-family: $roboto;
   font-weight: $ro7;
-  font-size: 55px;
+  font-size: 45px;
   @include breakpoint(desktop) {
     font-size: 56px;
   }

@@ -32,20 +32,23 @@ button:focus {
   box-sizing: border-box;
 }
 
-.site-padding, #kommende-events h3, #kommende-events h1 {
+.site-padding, .subtitle-1,
+.subtitle-2, #kommende-events h1 {
   margin-left: 24px;
   margin-right: 24px;
 }
 @media all and (min-width: 750px) {
-  .site-padding, #kommende-events h3, #kommende-events h1 {
-    margin-left: 150px;
-    margin-right: 150px;
+  .site-padding, .subtitle-1,
+.subtitle-2, #kommende-events h1 {
+    margin-left: 10vw;
+    margin-right: 10vw;
   }
 }
 @media all and (min-width: 1025px) {
-  .site-padding, #kommende-events h3, #kommende-events h1 {
-    margin-left: 150px;
-    margin-right: 150px;
+  .site-padding, .subtitle-1,
+.subtitle-2, #kommende-events h1 {
+    margin-left: 10vw;
+    margin-right: 10vw;
   }
 }
 
@@ -86,14 +89,15 @@ a {
 
 a:hover {
   text-decoration: underline;
-  text-decoration-color: #fab080;
+  text-decoration-color: #d2dbd7 !important;
 }
 
 a:active {
   color: #fab080;
 }
 
-.super-font, .font-button, #kommende-events .events-container article.event .right a.fb-button, #kommende-events .events-container article.event .right a, .font-button-fb, .font-events-p, #kommende-events .events-container article.event .right p, .font-events-month, #kommende-events .events-container article.event .left p.month, .font-events-location, #kommende-events .events-container article.event .right h3, .font-events-time, #kommende-events .events-container article.event .left p.time, .font-events-day, #kommende-events .events-container article.event .left h3, .font-db-lasttitle, .font-db-total, .font-db-latest, .font-db-kg2, .font-db-kg1, .font-blog-link, .font-blog-category, .font-blog-date, .font-blog-title, .font-links, .font-footer-sub, .font-footer-some, .font-footer-main, .font-desk-subnav, .font-desk-nav, .font-mobile-subnav, .font-mobile-nav, .font-h3, #kommende-events h3, .font-db-sub, .font-h2, .font-h1, #kommende-events h1, .font-p, #kommende-events article {
+.super-font, .font-button, #kommende-events .events-container article.event .right a.fb-button, #kommende-events .events-container article.event .right a, .font-button-fb, .font-events-p, #kommende-events .events-container article.event .right p, .font-events-month, #kommende-events .events-container article.event .left p.month, .font-events-location, #kommende-events .events-container article.event .right h3, .font-events-time, #kommende-events .events-container article.event .left p.time, .font-events-day, #kommende-events .events-container article.event .left h3, .font-db-lasttitle, .font-db-total, .font-db-latest, .font-db-kg2, .font-db-kg1, .font-blog-link, .font-blog-category, .font-blog-date, .font-blog-title, .font-links, .font-footer-sub, .font-footer-some, .font-footer-main, .font-desk-subnav, .font-desk-nav, .font-mobile-subnav, .font-mobile-nav, .font-h3, .subtitle-1,
+.subtitle-2, .font-db-sub, .font-h2, .font-h1, #kommende-events h1, .font-p, #kommende-events article {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #004b69;
@@ -115,7 +119,7 @@ a:active {
 .font-h1, #kommende-events h1 {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 33px;
+  font-size: 31px;
   color: #829fb1;
   border-bottom: 2px solid #fddbc5;
   margin-bottom: 50px;
@@ -130,8 +134,8 @@ a:active {
 
 .font-h2 {
   font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: 29px;
+  font-weight: 700;
+  font-size: 25px;
   color: #829fb1;
   margin-bottom: 50px;
   border-bottom: 2px solid #fddbc5;
@@ -146,15 +150,17 @@ a:active {
   }
 }
 
-.font-h3, #kommende-events h3, .font-db-sub {
+.font-h3, .subtitle-1,
+.subtitle-2, .font-db-sub {
   font-family: "Raleway", sans-serif;
-  font-weight: 300;
-  font-size: 23px;
+  font-weight: 500;
+  font-size: 21px;
   color: #829fb1;
   margin-bottom: 25px;
 }
 @media all and (min-width: 1025px) {
-  .font-h3, #kommende-events h3, .font-db-sub {
+  .font-h3, .subtitle-1,
+.subtitle-2, .font-db-sub {
     text-align: right;
     font-size: 28px;
   }
@@ -176,10 +182,8 @@ a:active {
 .font-desk-nav {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
-  letter-spacing: 2px;
   font-size: 19px;
   color: #004b69;
-  margin-left: 80px;
 }
 
 .font-desk-subnav {
@@ -206,7 +210,7 @@ a:active {
 .font-footer-sub, .font-footer-some {
   font-family: "Quicksand", sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 19px;
 }
 @media all and (min-width: 1025px) {
   .font-footer-sub, .font-footer-some {
@@ -228,11 +232,6 @@ a:active {
 @media all and (min-width: 750px) {
   .font-links {
     font-size: 25px;
-  }
-}
-@media all and (min-width: 1025px) {
-  .font-links {
-    font-size: 30px;
   }
 }
 
@@ -341,7 +340,7 @@ a:active {
 .font-events-day, #kommende-events .events-container article.event .left h3 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: 55px;
+  font-size: 45px;
 }
 @media all and (min-width: 1025px) {
   .font-events-day, #kommende-events .events-container article.event .left h3 {
@@ -425,8 +424,8 @@ a:active {
     display: grid;
     grid-template-columns: 3fr 5fr;
     column-gap: 100px;
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 10vw;
+    margin-right: 10vw;
   }
 }
 
@@ -448,7 +447,9 @@ a:active {
 }
 @media all and (min-width: 1025px) {
   #kommende-events h1 {
-    align-self: center;
+    align-self: start;
+    padding-top: 10vw;
+    margin-bottom: 0px;
     margin-left: 0px;
     margin-right: 0px;
   }
@@ -463,11 +464,13 @@ a:active {
   }
 }
 
-#kommende-events h3 {
+.subtitle-1,
+.subtitle-2 {
   margin-bottom: 63px;
 }
 @media all and (min-width: 1025px) {
-  #kommende-events h3 {
+  .subtitle-1,
+.subtitle-2 {
     align-self: center;
     margin-left: 0px;
     margin-right: 0px;
@@ -478,9 +481,17 @@ a:active {
   margin-bottom: 25px;
 }
 
+@media all and (min-width: 750px) {
+  #kommende-events .events-container {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+}
 @media all and (min-width: 1025px) {
   #kommende-events .events-container {
     grid-column: 2/3;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 
@@ -506,7 +517,6 @@ a:active {
   justify-content: center;
   border-radius: 18px 0px 0px 18px;
   background-color: #dae3e7;
-  padding: 10px 10px;
   text-align: center;
 }
 @media all and (min-width: 1025px) {
@@ -564,9 +574,14 @@ a:active {
 }
 
 #kommende-events .events-container article.event .right div {
-  display: flex;
-  align-items: center;
   margin-bottom: 20px;
+  display: flex;
+}
+@media all and (min-width: 1025px) {
+  #kommende-events .events-container article.event .right div {
+    display: flex;
+    align-items: center;
+  }
 }
 
 #kommende-events .events-container article.event .right .bold {
@@ -581,17 +596,18 @@ a:active {
 #kommende-events .events-container article.event .right a {
   text-decoration: none;
   min-width: 100px;
-  height: 32px;
   border-radius: 18px;
-  padding: 4px 6px;
+  padding: 6px;
   background-color: #829fb1;
+  white-space: nowrap;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 10px;
 }
 @media all and (min-width: 1025px) {
   #kommende-events .events-container article.event .right a {
-    padding: 20px 20px;
+    padding: 10px 20px;
     transition: transform 0.9s ease;
   }
 }
@@ -617,12 +633,6 @@ a:active {
   }
 }
 
-#kommende-events h3 span.bold-link {
-  font-weight: 500;
-  text-decoration: underline;
-  color: #fab080;
-}
-
 .load {
   opacity: 0;
   transition: opacity 1s ease;
@@ -630,6 +640,14 @@ a:active {
 
 .visible {
   opacity: 1;
+}
+
+.test {
+  background-image: url("../assets/Facebook_button.svg");
+  height: 17px;
+  width: 16px;
+  background-size: cover;
+  margin-left: 5px;
 }
 
 /*# sourceMappingURL=events.css.map */

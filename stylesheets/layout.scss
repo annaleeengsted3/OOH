@@ -9,8 +9,10 @@ $mobilcontenttofooter: 95px;
 $mobilefooterpadding: 75px;
 
 $mobilepaddingsides: 24px;
-$tabletpaddingsides: 110px;
-$desktoppaddingsides: 150px;
+// $tabletpaddingsides: 110px;
+$tabletpaddingsides: 10vw;
+// $desktoppaddingsides: 150px;
+$desktoppaddingsides: 10vw;
 
 $desktoppaddingtop: 85px;
 $desktoptoptocontent: 250px;
@@ -18,7 +20,8 @@ $desktoptoptocontent: 250px;
 $footerpaddingtop: 230px;
 $footerpaddingbottom: 180px;
 
-$desktopmarginHeader: 200px;
+// $desktopmarginHeader: 200px;
+$desktopmarginHeader: 10vw;
 
 $gridgap: 100px;
 

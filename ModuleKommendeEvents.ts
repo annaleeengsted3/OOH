@@ -40,13 +40,12 @@ export default class ModuleKommendeEvents {
     this._dataLoader = new DataLoader(this._url);
     await this._dataLoader.loadData();
     this._events = this._dataLoader.getData;
-    console.log(this._events);
     this.sortData();
     this.getImgfromJSON();
   }
 
   private sortData() {
-    // sorter races efter deres løbstidspunkt, med ældste først
+    // sorter efter deres tidspunkt
     this._events.sort((a, b) => {
       if (b.dato_kode < a.dato_kode) {
         return 1;
@@ -54,7 +53,6 @@ export default class ModuleKommendeEvents {
         return -1;
       }
     });
-    console.log(this._events);
   }
 
   private async getImgfromJSON() {
@@ -88,6 +86,12 @@ export default class ModuleKommendeEvents {
       clone.querySelector(".right h3").innerHTML = event.title.rendered;
       clone.querySelector(".right .first-p").innerHTML = event.kort_tekst;
       clone.querySelector(".right .bold").innerHTML = event.adresse_2;
+      let link: HTMLAnchorElement = clone.querySelector(
+        ".right a.read-more-button"
+      );
+      let fblink: HTMLAnchorElement = clone.querySelector(".right a.fb-button");
+      link.href = `event.html?id=${event.id}`;
+      fblink.href = `${event.fb_link}`;
 
       dest.appendChild(clone);
     });

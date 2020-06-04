@@ -49,8 +49,13 @@ h1 {
   margin-bottom: 15px;
 }
 .details {
-  @extend .font-db-kg1;
   margin-top: -11px;
+}
+.details p {
+  @extend .font-db-kg1;
+  @include breakpoint(desktop) {
+    font-size: 35px;
+  }
 }
 .details h2 {
   border-bottom: 2px solid $darkpeach;
@@ -60,6 +65,7 @@ h1 {
   @extend .font-db-total;
 }
 .latest-wrapper {
+  border-bottom: 2px solid $lightpeach;
   @include breakpoint(tablet) {
     grid-column: 2/3;
     grid-row: 2/3;

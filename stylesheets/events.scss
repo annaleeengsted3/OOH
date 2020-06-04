@@ -7,6 +7,7 @@
   padding-top: $mobilepaddingtop;
   padding-bottom: $mobilcontenttofooter;
   min-height: 100vh;
+
   @include breakpoint(desktop) {
     padding-top: $desktoptoptocontent;
     padding-bottom: $spacingcontenttofooterdesktop;
@@ -34,7 +35,9 @@
   margin-bottom: $spacingtitletocontent;
   white-space: nowrap;
   @include breakpoint(desktop) {
-    align-self: center;
+    align-self: start;
+    padding-top: $desktopmarginHeader;
+    margin-bottom: 0px;
     margin-left: 0px;
     margin-right: 0px;
   }
@@ -47,7 +50,8 @@
   }
 }
 
-#kommende-events h3 {
+.subtitle-1,
+.subtitle-2 {
   @extend .site-padding;
   @extend .font-h3;
   margin-bottom: $spacingsections;
@@ -65,8 +69,14 @@
 }
 
 #kommende-events .events-container {
+  @include breakpoint(tablet) {
+    margin-left: $desktoppaddingsides;
+    margin-right: $desktoppaddingsides;
+  }
   @include breakpoint(desktop) {
     grid-column: 2/3;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 
@@ -92,7 +102,7 @@
   justify-content: center;
   border-radius: 18px 0px 0px 18px;
   background-color: $eventbg;
-  padding: 10px 10px;
+  // padding: 10px 10px;
   text-align: center;
   @include breakpoint(desktop) {
     padding: 40px 10px;
@@ -143,9 +153,16 @@
   margin-bottom: 18px;
 }
 #kommende-events .events-container article.event .right div {
-  display: flex;
-  align-items: center;
   margin-bottom: 20px;
+  // display: grid;
+  // justify-items: left;
+  display: flex;
+  @include breakpoint(tablet) {
+  }
+  @include breakpoint(desktop) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 #kommende-events .events-container article.event .right .bold {
@@ -160,15 +177,18 @@
   @extend .box-shadow;
   text-decoration: none;
   min-width: 100px;
-  height: 32px;
+  // height: 32px;
   border-radius: 18px;
-  padding: 4px 6px;
+  padding: 6px;
   background-color: $button;
+  // display: inline-block;
+  white-space: nowrap;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 10px;
   @include breakpoint(desktop) {
-    padding: 20px 20px;
+    padding: 10px 20px;
     transition: transform 0.9s ease;
   }
 }
@@ -193,11 +213,11 @@
   }
 }
 
-#kommende-events h3 span.bold-link {
-  font-weight: $ra5;
-  text-decoration: underline;
-  color: $darkpeach;
-}
+// #kommende-events h3 span.bold-link {
+//   font-weight: $ra5;
+//   text-decoration: underline;
+//   color: $darkpeach;
+// }
 
 .load {
   opacity: 0;
@@ -205,4 +225,12 @@
 }
 .visible {
   opacity: 1;
+}
+
+.test {
+  background-image: url("../assets/Facebook_button.svg");
+  height: 17px;
+  width: 16px;
+  background-size: cover;
+  margin-left: 5px;
 }

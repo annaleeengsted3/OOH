@@ -32,20 +32,29 @@ button:focus {
   box-sizing: border-box;
 }
 
-.site-padding, #om-os {
+.site-padding, h1,
+h2,
+h3,
+p {
   margin-left: 24px;
   margin-right: 24px;
 }
 @media all and (min-width: 750px) {
-  .site-padding, #om-os {
-    margin-left: 150px;
-    margin-right: 150px;
+  .site-padding, h1,
+h2,
+h3,
+p {
+    margin-left: 10vw;
+    margin-right: 10vw;
   }
 }
 @media all and (min-width: 1025px) {
-  .site-padding, #om-os {
-    margin-left: 150px;
-    margin-right: 150px;
+  .site-padding, h1,
+h2,
+h3,
+p {
+    margin-left: 10vw;
+    margin-right: 10vw;
   }
 }
 
@@ -86,7 +95,7 @@ a {
 
 a:hover {
   text-decoration: underline;
-  text-decoration-color: #fab080;
+  text-decoration-color: #d2dbd7 !important;
 }
 
 a:active {
@@ -115,7 +124,7 @@ a:active {
 .font-h1, #om-os h1 {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 33px;
+  font-size: 31px;
   color: #829fb1;
   border-bottom: 2px solid #fddbc5;
   margin-bottom: 50px;
@@ -130,8 +139,8 @@ a:active {
 
 .font-h2, #om-os h2 {
   font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: 29px;
+  font-weight: 700;
+  font-size: 25px;
   color: #829fb1;
   margin-bottom: 50px;
   border-bottom: 2px solid #fddbc5;
@@ -148,8 +157,8 @@ a:active {
 
 .font-h3, #om-os h3, .font-db-sub {
   font-family: "Raleway", sans-serif;
-  font-weight: 300;
-  font-size: 23px;
+  font-weight: 500;
+  font-size: 21px;
   color: #829fb1;
   margin-bottom: 25px;
 }
@@ -176,10 +185,8 @@ a:active {
 .font-desk-nav {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
-  letter-spacing: 2px;
   font-size: 19px;
   color: #004b69;
-  margin-left: 80px;
 }
 
 .font-desk-subnav {
@@ -206,7 +213,7 @@ a:active {
 .font-footer-sub, .font-footer-some {
   font-family: "Quicksand", sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 19px;
 }
 @media all and (min-width: 1025px) {
   .font-footer-sub, .font-footer-some {
@@ -222,17 +229,12 @@ a:active {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
   font-size: 28px;
-  text-decoration: underline;
   color: #004b69;
 }
 @media all and (min-width: 750px) {
   .font-links {
     font-size: 25px;
-  }
-}
-@media all and (min-width: 1025px) {
-  .font-links {
-    font-size: 30px;
+    font-weight: 500;
   }
 }
 
@@ -288,7 +290,7 @@ a:active {
 }
 @media all and (min-width: 1025px) {
   .font-db-total, .font-db-latest, .font-db-kg2, .font-db-kg1 {
-    font-size: 99px;
+    font-size: 85px;
   }
 }
 
@@ -341,7 +343,7 @@ a:active {
 .font-events-day {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: 55px;
+  font-size: 45px;
 }
 @media all and (min-width: 1025px) {
   .font-events-day {
@@ -400,7 +402,7 @@ a:active {
 }
 @media all and (min-width: 1025px) {
   .font-button, .font-button-fb {
-    font-size: 23px;
+    font-size: 21px;
   }
 }
 
@@ -420,6 +422,18 @@ a:active {
 @media all and (min-width: 1025px) {
   #om-os {
     padding-top: 250px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  h1,
+h2,
+h3,
+p {
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 
@@ -445,6 +459,13 @@ a:active {
   border-bottom: 2px solid #fddbc5;
   margin-bottom: 50px;
 }
+@media all and (min-width: 1025px) {
+  #om-os h1 {
+    align-self: start;
+    padding-top: 10vw;
+    margin-bottom: 0px;
+  }
+}
 
 #om-os article {
   margin-bottom: 40px;
@@ -464,12 +485,6 @@ a:active {
   border-bottom: 2px solid #fddbc5;
 }
 
-@media all and (min-width: 1025px) {
-  #om-os section.vores-mission h1 {
-    align-self: center;
-  }
-}
-
 #om-os section.vores-mission article.vores-mission {
   grid-column: 2;
 }
@@ -480,7 +495,7 @@ a:active {
   }
 }
 
-@media all and (min-width: 1025px) {
+@media all and (min-width: 750px) {
   #om-os .hvem-er-vi-container .hvem-er-vi .volunteer {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -498,7 +513,7 @@ a:active {
   }
 }
 
-@media all and (min-width: 1025px) {
+@media all and (min-width: 750px) {
   #om-os .hvem-er-vi-container .hvem-er-vi .volunteer .wrapper {
     grid-column: 1/2;
     grid-row: 1/2;
@@ -599,7 +614,6 @@ a:active {
   top: 2%;
   left: 20%;
   text-align: right;
-  margin-right: 4px;
 }
 @media all and (min-width: 1025px) {
   #om-os .galleri .img-container h3 {

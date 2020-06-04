@@ -42,16 +42,16 @@ button:focus {
   .site-padding, #event h2, .text,
 .fb-button,
 .details, #event h1 {
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 10vw;
+    margin-right: 10vw;
   }
 }
 @media all and (min-width: 1025px) {
   .site-padding, #event h2, .text,
 .fb-button,
 .details, #event h1 {
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 10vw;
+    margin-right: 10vw;
   }
 }
 
@@ -92,7 +92,7 @@ a {
 
 a:hover {
   text-decoration: underline;
-  text-decoration-color: #fab080;
+  text-decoration-color: #d2dbd7 !important;
 }
 
 a:active {
@@ -121,7 +121,7 @@ a:active {
 .font-h1, #event h1 {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 33px;
+  font-size: 31px;
   color: #829fb1;
   border-bottom: 2px solid #fddbc5;
   margin-bottom: 50px;
@@ -136,8 +136,8 @@ a:active {
 
 .font-h2 {
   font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: 29px;
+  font-weight: 700;
+  font-size: 25px;
   color: #829fb1;
   margin-bottom: 50px;
   border-bottom: 2px solid #fddbc5;
@@ -154,8 +154,8 @@ a:active {
 
 .font-h3, #event h2, .font-db-sub {
   font-family: "Raleway", sans-serif;
-  font-weight: 300;
-  font-size: 23px;
+  font-weight: 500;
+  font-size: 21px;
   color: #829fb1;
   margin-bottom: 25px;
 }
@@ -182,10 +182,8 @@ a:active {
 .font-desk-nav {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
-  letter-spacing: 2px;
   font-size: 19px;
   color: #004b69;
-  margin-left: 80px;
 }
 
 .font-desk-subnav {
@@ -212,7 +210,7 @@ a:active {
 .font-footer-sub, .font-footer-some {
   font-family: "Quicksand", sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 19px;
 }
 @media all and (min-width: 1025px) {
   .font-footer-sub, .font-footer-some {
@@ -234,11 +232,6 @@ a:active {
 @media all and (min-width: 750px) {
   .font-links {
     font-size: 25px;
-  }
-}
-@media all and (min-width: 1025px) {
-  .font-links {
-    font-size: 30px;
   }
 }
 
@@ -347,7 +340,7 @@ a:active {
 .font-events-day, #event .details .left h3 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: 55px;
+  font-size: 45px;
 }
 @media all and (min-width: 1025px) {
   .font-events-day, #event .details .left h3 {
@@ -431,8 +424,8 @@ a:active {
     display: grid;
     grid-template-columns: 3fr 5fr;
     column-gap: 100px;
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 10vw;
+    margin-right: 10vw;
   }
 }
 
@@ -443,8 +436,8 @@ a:active {
 
 @media all and (min-width: 750px) {
   #event .map {
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 10vw;
+    padding-right: 10vw;
   }
 }
 @media all and (min-width: 1025px) {
@@ -461,8 +454,8 @@ a:active {
 }
 @media all and (min-width: 750px) {
   #event img {
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 10vw;
+    padding-right: 10vw;
   }
 }
 @media all and (min-width: 1025px) {
@@ -490,7 +483,9 @@ a:active {
 }
 @media all and (min-width: 1025px) {
   #event h1 {
-    align-self: center;
+    align-self: start;
+    padding-top: 10vw;
+    margin-bottom: 0px;
     margin-left: 0px;
     margin-right: 0px;
   }

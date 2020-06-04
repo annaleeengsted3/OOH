@@ -23,7 +23,10 @@ footer {
 }
 
 footer article {
-  padding-bottom: 30px;
+  padding-bottom: 70px;
+  @include breakpoint(tablet) {
+    padding-bottom: 0px;
+  }
 }
 
 footer article > * {
@@ -62,7 +65,14 @@ footer .email-details {
 footer .footer-some {
   @extend .font-footer-sub;
   display: flex;
+  flex-direction: column;
   justify-self: end;
+  @include breakpoint(tablet) {
+    flex-direction: row;
+  }
+}
+footer .footer-some .footer-icons {
+  display: flex;
 }
 footer .footer-some p {
   color: $lightpeach;

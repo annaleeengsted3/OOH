@@ -15,21 +15,21 @@ export default class ModuleHeader {
 
   private addDesktopListeners() {
     document
-      .querySelector("header")
+      .querySelector("nav")
       .addEventListener("mouseover", this.addHoverEffect);
     document
-      .querySelector("header")
+      .querySelector("nav")
       .addEventListener("mouseout", this.removeHoverEffect);
   }
 
   private addHoverEffect = () => {
-    document.querySelector("header").classList.add("move");
+    document.querySelector("nav").classList.add("move");
 
     this._headerImg.classList.add("fade");
   };
 
   private removeHoverEffect = () => {
-    document.querySelector("header").classList.remove("move");
+    document.querySelector("nav").classList.remove("move");
     this._headerImg.classList.remove("fade");
   };
 
